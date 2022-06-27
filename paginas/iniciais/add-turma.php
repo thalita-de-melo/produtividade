@@ -129,12 +129,11 @@
             <button class="btn btn-primary" type="submit">Salvar</button>
         </div>
     </form>
-    <div class="p-3 mb-2 bg-success text-white" id="mensagem" style="visibility: hidden;">.bg-success</div>
+    <div class="p-3 mb-2 bg-success text-white mt-5" id="mensagem" style="visibility: visible;">.bg-success</div>
     </div>
 
 <script>
-    salvo();
-    
+
     function validate() {
       
       if( document.formulario.mat.value == "" ) {
@@ -146,9 +145,7 @@
     }
 
     function salvo(){
-        if(validate() == true){
-            document.getElementById(mensagem).style.visibility = 'visible';
-        }
+        document.getElementById(mensagem).style.visibility = 'hidden';
     }
 </script>
         
