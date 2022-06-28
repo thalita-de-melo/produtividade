@@ -10,17 +10,15 @@
         }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anos Iniciais</title>
+    <title>Anos Iniciais - Turmas</title>
 
-    
-    <!--CSS-->
-    <link rel="stylesheet" href="css/estilo.css"/>
 
     <!--BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">  
@@ -30,7 +28,7 @@
 
 </head>
 <body>
-<div class="main">
+    <div class="main">
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
                 <div class="container">
@@ -61,33 +59,25 @@
                 </div>
               </nav>
         </div> <!--header-->
-        <div class="container" id="principal">
-            <div class="row"> <!--anos iniciais e finais-->
-                <div class=" mt-5" tabindex="-1" role="dialog" id="modalTour">
-                      <div class="col mt-3">
-                        <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content rounded-4 shadow">
-                              <div class="modal-body p-5">
-                                <h2 class="fw-bold mb-0">Adicionar Turma</h2>
-                    
-                                <a class="btn btn-lg btn-primary mt-5 w-100" href="iniciais/add-turma.php" role="button">Clique Aqui</a>
-                              </div>
-                            </div>
-                          </div>  
-                        </div>
-                      <div class="col mt-3">
-                        <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content rounded-4 shadow">
-                              <div class="modal-body p-5">
-                                <h2 class="fw-bold mb-0">Ver Dados</h2>
-                        
-                                <a class="btn btn-lg btn-primary mt-5 w-100" href="iniciais/verturmas.php" role="button">Clique Aqui</a>
-                              </div>
-                            </div>
-                          </div> 
-                      </div> 
-                </div>           
-            </div>
+
+        <div class="container">
+            <form action="php/crud.php" method="post" class="row g-3 mt-3" >
+                <div class="col-sm-6">
+                    <label class="form-label" for="autoSizingInput">Ano</label>
+                    <select class="form-select" name="ano" id="autoSizingSelect">
+                        <option selected value="">Todos os anos</option>
+                        <option value="2o">2º Ano</option>
+                        <option value="3o">3º Ano</option>
+                        <option value="4o">4º Ano</option>
+                        <option value="5o">5º Ano</option>
+                        </select>
+                </div>
+                <div class="col-sm-6">
+                    <input type ="submit" class="btn btn-primary mt-2" name="ler">
+                </div>
+            </form>
+        </div><!--container-->
+        
     </div>
     
 </body>

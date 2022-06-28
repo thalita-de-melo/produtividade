@@ -63,7 +63,7 @@
     </div> <!--header-->
     <div class="container d-flex flex-column ">
         <h1 class="mt-2">Adicione as Infomações da Turma</h1>
-        <?php echo "<h3>Escola: {$_SESSION['UsuarioNome']} </h3>"  ; ?>
+        <?php echo "<h3>Escola: {$_SESSION['UsuarioNome']} </h3>"  ; ?> <!--return(validate());-->
     <form action="" method="post" name="formulario" onsubmit = "return(validate());" class="row g-3 mt-3">
         <div class="col-sm-3 col-flex">
         <label class="form-label" for="autoSizingInput">Turma</label>
@@ -75,13 +75,13 @@
             </select>
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Ano</label>
+        <label class="form-label" for="autoSizingInput">Ano</label>
         <select class="form-select" name="ano" id="autoSizingSelect">
             <option selected>* Escolha</option>
-            <option value="2o ano">2º Ano</option>
-            <option value="3o ano ">3º Ano</option>
-            <option value="4o ano">4º Ano</option>
-            <option value="5o ano">5º Ano</option>
+            <option value="2o">2º Ano</option>
+            <option value="3o">3º Ano</option>
+            <option value="4o">4º Ano</option>
+            <option value="5o">5º Ano</option>
             </select>
         </div>
         <div class="col-sm-3">
@@ -126,10 +126,11 @@
         </div>
         <p>Campos com * são obrigatórios</p>
         <div class="col-12">
-            <button class="btn btn-primary" type="submit">Salvar</button>
+            <button class="btn btn-success" type="submit">Salvar</button>
+            <a class="btn btn-danger" href="../anos_iniciais.php" role="button">Voltar</a>
         </div>
     </form>
-    <div class="p-3 mb-2 bg-success text-white mt-5" id="mensagem" style="visibility: visible;">.bg-success</div>
+    
     </div>
 
 <script>
@@ -141,12 +142,11 @@
          document.formulario.mat.focus() ;
          return false;
       }
+      alert("Turma Adicionada com Sucesso!");
+      window.open("verturmas.php");
       return (true);
     }
 
-    function salvo(){
-        document.getElementById(mensagem).style.visibility = 'hidden';
-    }
 </script>
         
 </body>
