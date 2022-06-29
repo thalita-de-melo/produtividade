@@ -36,6 +36,7 @@ if(isset($_POST['inserir'])) {
         if($id == $id_turma_sql){
             echo "<script>alert('Turma já adicionada ao banco de dados, verifique os dados e tente novamente');</script>";
             echo "<script>window.close();</script>";
+            break;
         }else{
             $query = "INSERT INTO turmas_iniciais VALUES (CURRENT_TIMESTAMP,'$escola','$id','$ano','$mat','$av_relatorio','$av_notas',
             '$professor','$azul_todas','$azul_pt','$azul_mat','$azul_cien','$azul_geo','$azul_hist')"; 
