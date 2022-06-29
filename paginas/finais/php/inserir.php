@@ -44,7 +44,7 @@ $query = "INSERT INTO turmas_finais VALUES (CURRENT_TIMESTAMP,'$escola','$id','$
 
 $result = $conn->query($query);
 
-
+echo "<script>window.close();</script>";
 
 }
 
