@@ -29,7 +29,7 @@ if(isset($_POST['inserir'])) {
     //teste
 
     $query = "select * from turmas_iniciais where escola like '%$escola%' ORDER BY id ASC"; 
-
+    $result = $conn->query($query);
     while ($row = $result->fetch_assoc()){
         $id_turma_sql = $row["id"];
         
