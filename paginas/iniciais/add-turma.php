@@ -64,7 +64,7 @@
     <div class="container d-flex flex-column ">
         <h1 class="mt-2">Adicione as Infomações da Turma</h1>
         <?php echo "<h3>Escola: {$_SESSION['UsuarioNome']} </h3>"  ; ?> <!--return(validate());-->
-    <form action="php/inserir.php" method="post" name="formulario" onsubmit = "return(validate());" class="row g-3 mt-3">
+    <form action="php/inserir.php" method="get" name="formulario" onsubmit = "return(validate());" class="row g-3 mt-3">
         <div class="col-sm-3 col-flex">
         <label class="form-label" for="autoSizingInput">Turma</label>
         <select class="form-select" name="id" id="autoSizingSelect">
@@ -179,3 +179,61 @@
         
 </body>
 </html>
+
+<?php 
+
+if (!isset($_SESSION)) session_start();
+
+          if($_SESSION['UsuarioNome'] == null){
+
+            header("Location: ../../index.html");
+            exit();
+        }
+
+include("../../../php/conexao/connection.php");
+
+
+if(isset($_GET['inserir'])) {
+    $escola = $_SESSION['UsuarioNome'];
+    $id = $_GET['id'];
+    $ano = $_GET['ano'];
+    $mat = $_GET['mat'];
+    $av_relatorio = $_GET['av_relatorio'];
+    $av_notas = $_GET['av_notas'];
+    $professor = strtoupper($_GET['professor']);
+    $azul_todas = $_GET['azul_todas'];
+    $azul_pt = $_GET['azul_pt'];
+    $azul_mat = $_GET['azul_mat'];
+    $azul_cien = $_GET['azul_cien'];
+    $azul_geo = $_GET['azul_geo'];
+    $azul_hist = $_GET['azul_hist'];
+
+//teste
+
+$query = "select * from turmas_iniciais where escola like '%$escola%' ORDER BY id ASC"; 
+
+    while ($row = $result->fetch_assoc()){
+        $id_turma_sql = $row["id"];
+        
+        if($id == $id_turma_sql){
+            echo "<script>alert('Turma já adicionada ao banco de dados, verifique os dados e tente novamente');</script>";
+            echo "<script>window.close();</script>";
+        }else{
+            $query = "INSERT INTO turmas_iniciais VALUES (CURRENT_TIMESTAMP,'$escola','$id','$ano','$mat','$av_relatorio','$av_notas',
+            '$professor','$azul_todas','$azul_pt','$azul_mat','$azul_cien','$azul_geo','$azul_hist')"; 
+
+            $result = $conn->query($query);
+
+            echo "<script>window.close();</script>";
+        }
+
+    }
+// Performing SQL query
+
+
+}
+
+
+
+
+?>

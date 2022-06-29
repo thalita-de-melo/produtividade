@@ -26,28 +26,13 @@ if(isset($_POST['inserir'])) {
     $azul_geo = $_POST['azul_geo'];
     $azul_hist = $_POST['azul_hist'];
 
-//teste
-
-$query = "select * from turmas_iniciais where escola like '%$escola%' ORDER BY id ASC"; 
-
-    while ($row = $result->fetch_assoc()){
-        $id_turma_sql = $row["id"];
-        
-        if($id == $id_turma_sql){
-            echo "<script>alert('Turma já adicionada ao banco de dados, verifique os dados e tente novamente');</script>";
-            echo "<script>window.close();</script>";
-        }else{
-            $query = "INSERT INTO turmas_iniciais VALUES (CURRENT_TIMESTAMP,'$escola','$id','$ano','$mat','$av_relatorio','$av_notas',
-            '$professor','$azul_todas','$azul_pt','$azul_mat','$azul_cien','$azul_geo','$azul_hist')"; 
-
-            $result = $conn->query($query);
-
-            echo "<script>window.close();</script>";
-        }
-
-    }
 // Performing SQL query
+$query = "INSERT INTO turmas_iniciais VALUES (CURRENT_TIMESTAMP,'$escola','$id','$ano','$mat','$av_relatorio','$av_notas',
+'$professor','$azul_todas','$azul_pt','$azul_mat','$azul_cien','$azul_geo','$azul_hist')"; 
 
+$result = $conn->query($query);
+
+echo "<script>window.close();</script>";
 
 }
 
