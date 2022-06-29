@@ -74,6 +74,65 @@
     include("../../../php/conexao/connection.php");
 
     $escola = $_SESSION['UsuarioNome'];
+
+    if($status == true) {
+      $searchq = $_POST['ano'];
+
+  // Performing SQL query
+  $query = "select * from turmas_finais where ano like '%$searchq%' AND escola like '%$escola%' ORDER BY id ASC"; 
+
+  $result = $conn->query($query);
+  $linhas = mysqli_num_rows($result);
+
+  //text-center align-self-center table-bordered
+
+  if($linhas > 0){
+
+    echo "<div class='table-responsive-md'>";
+    echo "<table class='table table-striped text-center'>"; echo "
+    <thead class='thead-light'> 
+        <tr bgcolor='#5FAEC2'  style=''>
+            <th>APAGAR</th>
+            <th>ESCOLA</th> 
+            <th>TURMA</th> 
+            <th>ANO</th> 
+            <th>MATRICULADOS</th>
+            <th>AVALIADOS RELA.</th> 
+            <th>AVALIADOS NOTA</th> 
+            <th>AZUIS EM TODAS</th> 
+            <th>PROF PT</th>
+            <th>NOTA AZUL PT</th>
+            <th>PROFR MAT</th> 
+            <th>NOTA AZUL MAT</th>
+            <th>PROF CIEN</th>
+            <th>NOTA AZUL CIEN</th>
+            <th>PROF GEO</th> 
+            <th>NOTA AZUL GEO</th>
+            <th>PROF HIST</th>
+            <th>NOTA AZUL HIST</th>
+            <th>PROF ED FIS</th>
+            <th>NOTA AZUL ED FIS</th>
+            <th>PROF ING</th>
+            <th>NOTA AZUL ING</th>  
+            <th>PROF ARTES</th>
+            <th>NOTA AZUL ARTES</th>  
+        </tr> 
+    </thead>";
+
+        while ($row = $result->fetch_assoc()){
+            echo "<form action='delete.php?id=".$row['id']."'  method='post'>";
+            $id = $row["id"];
+            $_SESSION['id'] = $id;
+            //<td><input type ='hidden' style='display: none;' name='id' value='".$row['id']."'></td>
+            echo "<tr class='' style=''>  <td><button type ='submit' class='btn btn-danger mt-2' onClick='' name='apagar'><i class='bi bi-trash' syle='font-size: 20px;'></i></button></td> <td>".$row["escola"]." </td> <td>".$row["id"]." </td> <td>".$row["ano"]." </td> <td> ".$row["mat"]." </td> <td> ".$row["av_relatorio"]." </td> <td>".$row["av_notas"]." </td> <td>".$row["azul_todas"]."</td> <td> ".$row["professor_pt"]."</td>  <td>".$row["azul_pt"]."</td> <td> ".$row["professor_mat"]."</td> <td>".$row["azul_mat"]."</td> <td> ".$row["professor_cien"]."</td> <td>".$row["azul_cien"]."</td> <td> ".$row["professor_geo"]."</td> <td>".$row["azul_geo"]."</td> <td> ".$row["professor_hist"]."</td> <td>".$row["azul_hist"]."</td> <td> ".$row["professor_ed_fis"]."</td> <td>".$row["azul_ed_fis"]."</td> <td> ".$row["professor_arte"]."</td> <td>".$row["azul_arte"]."</td> <td> ".$row["professor_ingles"]."</td> <td>".$row["azul_ingles"]."</td> </tr>";
+            
+          }
+    }else{
+        echo "<p>Resultado não encontrado</p>";
+    }
+        } else {
+            
+        }
     
 
     //read
