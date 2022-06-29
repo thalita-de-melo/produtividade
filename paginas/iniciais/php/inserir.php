@@ -27,7 +27,7 @@ if(isset($_POST['inserir'])) {
     $azul_hist = $_POST['azul_hist'];
 
 // Performing SQL query
-$query = "INSERT INTO turmas_iniciais VALUES ('$escola','$id','$ano','$mat','$av_relatorio','$av_notas',
+$query = "INSERT INTO turmas_iniciais VALUES (CURRENT_TIMESTAMP,'$escola','$id','$ano','$mat','$av_relatorio','$av_notas',
 '$professor','$azul_todas','$azul_pt','$azul_mat','$azul_cien','$azul_geo','$azul_hist')"; 
 
 $result = $conn->query($query);

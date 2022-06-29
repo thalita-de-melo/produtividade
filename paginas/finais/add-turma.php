@@ -117,7 +117,7 @@
             <input type="number" name="mat" class="form-control" id="autoSizingInput" placeholder="* Matriculados">
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Avaliados por Relatório</label>
+            <label class="form-label" for="autoSizingInput">Avaliados por Relatório (Educação Especial)</label>
             <input type="number" class="form-control" name="av_relatorio" id="autoSizingInput" placeholder="* Nº de Avaliados por Relatório">
         </div>
         <div class="col-sm-6">
