@@ -20,7 +20,9 @@ $query = "delete from turmas_finais where id like '%$id%' AND escola like '%$esc
 
 $result = $conn->query($query);
 
-header("Location: crud.php");
+echo "<script>window.open('crud.php');</script>";
+
+//header("Location: crud.php");
 
 }
 
