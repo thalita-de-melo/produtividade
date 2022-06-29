@@ -171,7 +171,7 @@
          return false;
       }
       alert("Turma Adicionada com Sucesso!");
-      window.open("verturmas.php");
+      window.open("add-turma.php");
       return (true);
     }
 
