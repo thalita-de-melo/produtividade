@@ -103,9 +103,9 @@
             </select>
         </div>
         <div class="col-sm-3">
-        <label class="form-label" for="autoSizingInput">Ano</label>
+        <label class="form-label" for="autoSizingInput">* Ano</label>
         <select class="form-select" name="ano" id="autoSizingSelect">
-            <option selected>* Escolha</option>
+            <option selected>Ano</option>
             <option value="2o">2º Ano</option>
             <option value="3o">3º Ano</option>
             <option value="4o">4º Ano</option>
