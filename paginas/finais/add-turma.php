@@ -212,8 +212,8 @@
          return false;
       }
       alert("Turma Adicionada com Sucesso!");
-      //window.open("add-turma.php");
-      header("Location: add-turma.php");
+      window.open("add-turma.php");
+      //header("Location: add-turma.php");
       return (true);
     }
 
