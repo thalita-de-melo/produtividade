@@ -74,7 +74,7 @@
                 </div>
                 <div class="col-sm-6">
                     <input type ="submit" class="btn btn-primary" name="ler">
-                    <a class="btn btn-danger mx-3" href="../anos_iniciais.php" role="button">Voltar</a>
+                    <a class="btn btn-danger mx-3" href="../anos_finais.php" role="button">Voltar</a>
                 </div>
             </form>
 
