@@ -66,10 +66,10 @@
                     <label class="form-label" for="autoSizingInput">Ano</label>
                     <select class="form-select" name="ano" id="autoSizingSelect">
                         <option selected value="">Todos os anos</option>
-                        <option value="2o">2º Ano</option>
-                        <option value="3o">3º Ano</option>
-                        <option value="4o">4º Ano</option>
-                        <option value="5o">5º Ano</option>
+                        <option value="6o">6º Ano</option>
+                        <option value="7o">7º Ano</option>
+                        <option value="8o">8º Ano</option>
+                        <option value="9o">9º Ano</option>
                         </select>
                 </div>
                 <div class="col-sm-6">

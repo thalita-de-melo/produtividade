@@ -45,7 +45,7 @@
                         <a class="nav-link" aria-current="page" href="menu.html">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" href="anos_iniciais.php">Anos Iniciais</a>
+                        <a class="nav-link active" href="../anos_iniciais.php">Anos Iniciais</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="anos_finais.php">Anos Finais</a> <!--disabled-->
@@ -64,7 +64,7 @@
     <div class="container d-flex flex-column ">
         <h1 class="mt-2">Adicione as Infomações da Turma</h1>
         <?php echo "<h3>Escola: {$_SESSION['UsuarioNome']} </h3>"  ; ?> <!--return(validate());-->
-    <form action="" method="post" name="formulario" onsubmit = "return(validate());" class="row g-3 mt-3">
+    <form action="php/inserir.php" method="post" name="formulario" onsubmit = "return(validate());" class="row g-3 mt-3">
         <div class="col-sm-3 col-flex">
         <label class="form-label" for="autoSizingInput">Turma</label>
         <select class="form-select" name="id" id="autoSizingSelect">
@@ -72,6 +72,34 @@
             <option value="EF 201">EF 201</option>
             <option value="EF 202">EF 202</option>
             <option value="EF 203">EF 203</option>
+            <option value="EF 204">EF 204</option>
+            <option value="EF 205">EF 205</option>
+            <option value="EF 206">EF 206</option>
+            <option value="EF 207">EF 207</option>
+            <option value="EF 208">EF 208</option>
+            <option value="EF 209">EF 209</option>
+            <option value="EF 210">EF 210</option>
+            <option value="EF 211">EF 211</option>
+            <option value="EF 212">EF 212</option>
+            <option value="EF 213">EF 213</option>
+            <option value="EF 214">EF 214</option>
+            <option value="EF 215">EF 215</option>
+            <!-- 3º ano -->
+            <option value="EF 301">EF 301</option>
+            <option value="EF 302">EF 302</option>
+            <option value="EF 303">EF 303</option>
+            <option value="EF 304">EF 304</option>
+            <option value="EF 305">EF 305</option>
+            <option value="EF 306">EF 306</option>
+            <option value="EF 307">EF 307</option>
+            <option value="EF 308">EF 308</option>
+            <option value="EF 309">EF 309</option>
+            <option value="EF 310">EF 310</option>
+            <option value="EF 311">EF 311</option>
+            <option value="EF 312">EF 312</option>
+            <option value="EF 313">EF 313</option>
+            <option value="EF 314">EF 314</option>
+            <option value="EF 315">EF 315</option>
             </select>
         </div>
         <div class="col-sm-3">
@@ -97,8 +125,8 @@
             <input type="number" class="form-control" name="av_notas" id="autoSizingInput" placeholder="* Nº de Avaliados por Nota">
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Professor</label>
-            <input type="text" class="form-control" name="professor" id="autoSizingInput" placeholder="* Nome">
+            <label class="form-label" for="autoSizingInput">Matrícula do Professor</label>
+            <input type="text" class="form-control" name="professor" id="autoSizingInput" placeholder="* Matrícula">
         </div>
         <div class="col-sm-6">
             <label class="form-label" for="autoSizingInput">Total de Alunos com Nota Azul em TODAS as Disciplinas</label>
@@ -126,7 +154,7 @@
         </div>
         <p>Campos com * são obrigatórios</p>
         <div class="col-12">
-            <button class="btn btn-success" type="submit">Salvar</button>
+            <button type ="submit" class="btn btn-success" name="inserir">Salvar</button>
             <a class="btn btn-danger" href="../anos_iniciais.php" role="button">Voltar</a>
         </div>
     </form>

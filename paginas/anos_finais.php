@@ -45,10 +45,10 @@
                         <a class="nav-link" aria-current="page" href="menu.html">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" href="anos_iniciais.php">Anos Iniciais</a>
+                        <a class="nav-link " href="anos_iniciais.php">Anos Iniciais</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="anos_finais.php">Anos Finais</a> <!--disabled-->
+                        <a class="nav-link active" href="../anos_finais.php">Anos Finais</a> <!--disabled-->
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="medio.php">Ensino Médio</a>
@@ -62,7 +62,7 @@
               </nav>
         </div> <!--header-->
         <div class="container" id="principal">
-        <h1 class='text-center mt-3' style='color: '>Anos Iniciais</h1>
+          <h1 class='text-center mt-3' style='color: '>Anos Finais</h1>
             <div class="row"> <!--anos iniciais e finais-->
                 <div class="row mt-5" tabindex="-1" role="dialog" id="modalTour">
                       <div class="col mt-3">
@@ -71,7 +71,7 @@
                               <div class="modal-body p-4">
                                 <h2 class="fw-bold mb-0">Adicionar Turma</h2>
                     
-                                <a class="btn btn-lg btn-primary mt-5 w-100" href="iniciais/add-turma.php" role="button">Clique Aqui</a>
+                                <a class="btn btn-lg btn-primary mt-5 w-100" href="finais/add-turma.php" role="button">Clique Aqui</a>
                               </div>
                             </div>
                           </div>  
@@ -82,7 +82,7 @@
                               <div class="modal-body p-4">
                                 <h2 class="fw-bold mb-0">Ver Turmas</h2>
                         
-                                <a class="btn btn-lg btn-primary mt-5 w-100" href="iniciais/verturmas.php" role="button">Clique Aqui</a>
+                                <a class="btn btn-lg btn-primary mt-5 w-100" href="finais/verturmas.php" role="button">Clique Aqui</a>
                               </div>
                             </div>
                           </div> 
