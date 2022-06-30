@@ -31,9 +31,20 @@ if(isset($_POST['inserir'])) {
 $query = "INSERT INTO turmas_iniciais VALUES (CURRENT_TIMESTAMP,'$escola','$id','$ano','$mat','$av_relatorio','$av_notas',
 '$professor','$azul_todas','$azul_pt','$azul_mat','$azul_cien','$azul_geo','$azul_hist')"; 
 
-$result = $conn->query($query);
+$check = $conn->query("select * from turmas_iniciais where ano like '%$id%' and escola like '%$escola%'");
 
-echo "<script>window.close();</script>";
+if($checkrows>0) {
+    echo '<script>alert("Turma já cadastrada, verifique suas turmas na aba ver turmas!"
+    window.open("../verturmas.php");
+    </script>';
+}else{
+    $result = $conn->query($query);
+    echo 'window.open("add-turma.php");';
+    echo "<script>window.close();</script>";
+}
+
+
+
 
 }  
 

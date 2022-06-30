@@ -170,8 +170,8 @@
          document.formulario.mat.focus() ;
          return false;
       }
-      alert("Turma Adicionada com Sucesso!");
-      window.open("add-turma.php");
+      //alert("Turma Adicionada com Sucesso!");
+      //window.open("add-turma.php");
       return (true);
     }
 
