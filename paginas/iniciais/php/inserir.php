@@ -36,6 +36,7 @@ $check = $conn->query($query_check);
 $checkrows=mysqli_num_rows($check);
 
 if($checkrows > 0) {
+    echo "erro";
     echo '<script>
     alert("Turma já cadastrada, verifique suas turmas na aba ver turmas!"
     window.open("../verturmas.php");
