@@ -49,17 +49,19 @@
                 </div>
               </nav>
     </div> <!--header-->
-
-        <div class="p-3 mb-2 bg-success bg-gradient text-white" id="sucesso" style="display: none;">.bg-success</div>
-        <div class="p-3 mb-2 bg-danger bg-gradient text-white" id="fail" style="display: none;">.bg-danger</div>
+<div class="container mt-5">
+        <div class="alert alert-success" id="sucesso" style="display: none;">Turma Adicionada</div>
+        <div class="alert alert-danger" id="fail" style="display: none;">A turma que você está tentando adicionar já existe. Por favor verifique a numeração da turma e tnete novamente.</div>
     
         <div class="col-12">
-        <a class="btn btn-danger" href="../verturmas.php" role="button">Ver turmas</a>
+        <a class="btn btn-info text-white" href="../verturmas.php" role="button">Ver turmas</a>
             <a class="btn btn-danger" href="../add-turma.php" role="button">Voltar</a>
         </div>
     </form>
     
     </div>
+
+</div>
 
 <script>
 
@@ -111,24 +113,23 @@ if(isset($_POST['inserir'])) {
 
  
 // Performing SQL query  CURRENT_TIMESTAMP --> colocar isso
-$query = "INSERT INTO turmas_iniciais VALUES ('$escola','$id','$ano','$mat','$av_relatorio','$av_notas',
+$query = "INSERT INTO turmas_iniciais VALUES (CURRENT_TIMESTAMP,'$escola','$id','$ano','$mat','$av_relatorio','$av_notas',
 '$professor','$azul_todas','$azul_pt','$azul_mat','$azul_cien','$azul_geo','$azul_hist')"; 
 
 $check_query = "SELECT * FROM turmas_iniciais WHERE id like '$id' AND escola like '$escola';";
 $check = $conn->query($check_query);
 $check_rows = mysqli_num_rows($check);
 
-echo $check_rows;
+//echo $check_rows;
 
 if($check_rows > 0){
-    echo "ja existe";
     echo '<script>
             fail();
-            </script>';
+        </script>';
 }else{
     $result = $conn->query($query);
     echo '<script>
-    sucesso();
+        sucesso();
     </script>';
 
 }

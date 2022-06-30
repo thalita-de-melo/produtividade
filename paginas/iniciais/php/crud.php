@@ -65,7 +65,7 @@
 
           if($_SESSION['UsuarioNome'] == null){
 
-            header("Location: ../../index.html");
+            header("Location: ../../../index.html");
             exit();
         }
 
@@ -126,13 +126,6 @@
     echo "</table>";
 
     echo "<p style='text-align: center; font-weight: bold;'>Total de Turmas: $linhas </p>";
-
-
-
-
-    function apagar($id){
-        $query = "delete from turmas_iniciais where id like '%$id%' AND escola like '%$escola%' ORDER BY id ASC"; 
-    }
 
 
 ?>
