@@ -35,6 +35,18 @@ $query_check("select * from turmas_iniciais where id like '%$id%' and escola lik
 $check = $conn->query($query_check);
 $checkrows=mysqli_num_rows($check);
 
+if($checkrows > 0) {
+    echo "erro";
+
+}else{
+    $result = $conn->query($query);
+    echo "<script>
+    window.open('add-turma.php');
+    window.close();</script>";
+}
+
+
+
 
 }  
 
