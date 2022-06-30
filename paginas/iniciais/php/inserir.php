@@ -31,7 +31,8 @@ if(isset($_POST['inserir'])) {
 $query = "INSERT INTO turmas_iniciais VALUES (CURRENT_TIMESTAMP,'$escola','$id','$ano','$mat','$av_relatorio','$av_notas',
 '$professor','$azul_todas','$azul_pt','$azul_mat','$azul_cien','$azul_geo','$azul_hist')"; 
 
-$check = $conn->query("select * from turmas_iniciais where ano like '%$id%' and escola like '%$escola%'");
+$query_check("select * from turmas_iniciais where ano like '%$id%' and escola like '%$escola%'");
+$check = $conn->query($query_check);
 $checkrows=mysqli_num_rows($check);
 
 if($checkrows > 0) {
