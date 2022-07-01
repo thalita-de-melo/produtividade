@@ -30,6 +30,30 @@
 
 </head>
 <body>
+
+<script>
+      function status(){
+        let getStatus = confirm("Uma vez finalizado você não poderá editar os dados. \nVocê tem certeza que deseja finalizar esse módulo?");
+
+        if(getStatus){
+          //alert("oi");
+          //finalizado();
+          //show();
+          return true;
+        }else{
+          //alert("tchau");
+          return false;
+        }
+      }
+
+      function show(){
+        var element = document.getElementById('bloqueia');
+        console.log(element);
+        element.style.display = 'none';
+      }
+    </script>
+    
+
 <div class="main">
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
@@ -64,7 +88,7 @@
         <div class="container" id="principal">
         <h1 class='text-center mt-3' style='color: '>Anos Iniciais</h1>
             <div class="row"> <!--anos iniciais e finais-->
-                <div class="row mt-5" tabindex="-1" role="dialog" id="modalTour">
+                <div class="row mt-5" tabindex="-1" style="display=block" role="dialog" id="bloqueia">
                       <div class="col mt-3">
                         <div class="modal-dialog modal-sm" role="document">
                             <div class="modal-content rounded-4 shadow">
@@ -88,17 +112,53 @@
                           </div> 
                       </div> 
                 </div>   
-                <div class="row mt-5" tabindex="-1" role="dialog" id="modalTour">
+                <div class="row mt-5 text-center" tabindex="-1" role="dialog" id="modalTour">
                       <div class="col mt-3">
                         <div class="modal-dialog modal-sm" role="document">
                             <div class="modal-content rounded-4 shadow">
                               <div class="modal-body p-4">
                                 <h2 class="fw-bold mb-0">Status</h2>
-                    
-                                <div class="form-check form-switch mt-2">
-                                  <input class="btn btn-warning" type="button" role="" id="flexSwitchCheckDefault" value="Finalizar">
-                                  <label class="form-check-label" for="flexSwitchCheckDefault">Não Finalizado</label>
-                                </div>
+
+                                <form class="mt-3" action="iniciais/php/status.php" method="post" name="formulario" onsubmit = "return(status());">
+                                  <span>
+                                    <?php
+                                    if (!isset($_SESSION)) session_start();
+
+                                    if($_SESSION['UsuarioNome'] == null){
+                              
+                                        header("Location: ../../index.html");
+                                        exit();
+                                    }
+                          
+                                    include("../php/conexao/connection.php");
+
+                                    $escola = $_SESSION['UsuarioNome'];
+                                    $segmento = 1;
+
+                                    $query = "SELECT * FROM finalizado WHERE segmento like '$segmento' AND escola like '$escola';";
+                                    
+                                    $result = $conn->query($query);
+                                    $linhas = mysqli_num_rows($result);
+
+                                    if($linhas > 0){
+                                    while ($row = $result->fetch_assoc()){
+                                      $status = $row["status"];
+                                      echo '<p style="color:green; font-weight:bold; font-size:18px;">Finalizado</p>';
+                                      echo '<script type="text/javascript">
+                                      show();
+                                      </script>';
+                                      }
+                                      }else{
+                                        echo '<p style="color:red; font-weight:bold; font-size:18px;">Não finalizado</p>';
+                                      }
+
+                                      
+
+                                    ?>
+                                  </span>
+                                  <button class="btn btn-warning text-white" onclick="" style="font-weight:bold;" type="submit" role="" id="flexSwitchCheckDefault" name="validaStatus" value="Finalizar">Finalizar</button>
+                                </form>
+
                               </div>
                             </div>
                           </div>  
@@ -106,6 +166,7 @@
                 </div>             
             </div>
     </div>
+
     
 </body>
 </html>
