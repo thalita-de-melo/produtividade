@@ -96,7 +96,7 @@
                                 <h2 class="fw-bold mb-0">Status</h2>
                     
                                 <div class="form-check form-switch mt-2">
-                                  <input class="btn btn-warning" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                  <input class="btn btn-warning" type="button" role="" id="flexSwitchCheckDefault" value="Finalizar">
                                   <label class="form-check-label" for="flexSwitchCheckDefault">Não Finalizado</label>
                                 </div>
                               </div>
