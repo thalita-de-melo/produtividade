@@ -10,6 +10,7 @@
         }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +30,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
-<body>
+<body class="bg-success bg-opacity-10">
 
 <script>
       function status(){
@@ -51,11 +52,11 @@
         console.log(element);
         element.style.display = 'none';
       }
-    </script>
+</script>
     
 
 <div class="main">
-        <div>
+          <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
                 <div class="container">
                   <a class="navbar-brand" href="menu.html">Produtividade</a>
@@ -81,17 +82,20 @@
                         <a class="nav-link" href="eja.php">EJA</a>
                       </li>
                     </ul>
+                    <div class="text-end">
+                      <a class="btn btn-danger" href="menu.html" role="button">Voltar</a>
+                    </div>
                   </div>
                 </div>
               </nav>
         </div> <!--header-->
         <div class="container" id="principal">
-        <h1 class='text-center mt-3' style='color: '>Anos Iniciais</h1>
+        <h1 class='text-center mt-5 opacity-75 text-decoration-underline' style='color: #000000; font-weight:bold; '>Anos Iniciais</h1>
             <div class="row"> <!--anos iniciais e finais-->
                 <div class="row mt-5" tabindex="-1" style="display=block" role="dialog" id="bloqueia">
                       <div class="col mt-3">
                         <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content rounded-4 shadow">
+                            <div class="modal-content rounded-4 shadow bg-light ">
                               <div class="modal-body p-4">
                                 <h2 class="fw-bold mb-0">Adicionar Turma</h2>
                     
@@ -102,7 +106,7 @@
                         </div>
                       <div class="col mt-3">
                         <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content rounded-4 shadow">
+                            <div class="modal-content rounded-4 shadow bg-light">
                               <div class="modal-body p-4">
                                 <h2 class="fw-bold mb-0">Ver Turmas</h2>
                         
@@ -115,7 +119,7 @@
                 <div class="row mt-5 text-center" tabindex="-1" role="dialog" id="modalTour">
                       <div class="col mt-3">
                         <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content rounded-4 shadow">
+                            <div class="modal-content rounded-4 shadow bg-light">
                               <div class="modal-body p-4">
                                 <h2 class="fw-bold mb-0">Status</h2>
 
@@ -164,7 +168,7 @@
                           </div>  
                         </div>
                 </div>             
-            </div>
+            </div> <!--STATUS-->
     </div>
 
     

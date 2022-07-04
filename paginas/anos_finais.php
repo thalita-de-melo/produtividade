@@ -29,9 +29,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
-<body>
+<body class="bg-primary bg-opacity-10">
+<script>
+      function status(){
+        let getStatus = confirm("Uma vez finalizado você não poderá editar os dados. \nVocê tem certeza que deseja finalizar esse módulo?");
+
+        if(getStatus){
+          //alert("oi");
+          //finalizado();
+          //show();
+          return true;
+        }else{
+          //alert("tchau");
+          return false;
+        }
+      }
+
+      function show(){
+        var element = document.getElementById('bloqueia');
+        console.log(element);
+        element.style.display = 'none';
+      }
+</script>
 <div class="main">
-        <div>
+          <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
                 <div class="container">
                   <a class="navbar-brand" href="menu.html">Produtividade</a>
@@ -42,13 +63,13 @@
                   <div class="collapse navbar-collapse" id="navbarsExample07">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="menu.html">Inicio</a>
+                        <a class="nav-link" href="menu.html">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link " href="anos_iniciais.php">Anos Iniciais</a>
+                        <a class="nav-link" href="anos_iniciais.php">Anos Iniciais</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" href="../anos_finais.php">Anos Finais</a> <!--disabled-->
+                        <a class="nav-link active" href="anos_finais.php">Anos Finais</a> <!--disabled-->
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="medio.php">Ensino Médio</a>
@@ -57,17 +78,20 @@
                         <a class="nav-link" href="eja.php">EJA</a>
                       </li>
                     </ul>
+                    <div class="text-end">
+                      <a class="btn btn-danger" href="menu.html" role="button">Voltar</a>
+                    </div>
                   </div>
                 </div>
               </nav>
         </div> <!--header-->
         <div class="container" id="principal">
-          <h1 class='text-center mt-3' style='color: '>Anos Finais</h1>
+          <h1 class='text-center mt-5 opacity-75 text-decoration-underline' style='color: #000000; font-weight:bold; '>Anos Finais</h1>
             <div class="row"> <!--anos iniciais e finais-->
-                <div class="row mt-5" tabindex="-1" role="dialog" id="modalTour">
+                <div class="row mt-5" tabindex="-1" role="dialog" id="bloqueia">
                       <div class="col mt-3">
                         <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content rounded-4 shadow">
+                            <div class="modal-content rounded-4 shadow bg-light">
                               <div class="modal-body p-4">
                                 <h2 class="fw-bold mb-0">Adicionar Turma</h2>
                     
@@ -78,7 +102,7 @@
                         </div>
                       <div class="col mt-3">
                         <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content rounded-4 shadow">
+                            <div class="modal-content rounded-4 shadow bg-light">
                               <div class="modal-body p-4">
                                 <h2 class="fw-bold mb-0">Ver Turmas</h2>
                         
@@ -87,24 +111,67 @@
                             </div>
                           </div> 
                       </div> 
-                </div>   
-                <div class="row mt-5" tabindex="-1" role="dialog" id="modalTour">
+                </div>              
+            </div>
+
+            <div class="row mt-5 text-center" tabindex="-1" role="dialog" id="modalTour">
                       <div class="col mt-3">
                         <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content rounded-4 shadow">
+                            <div class="modal-content rounded-4 shadow bg-light">
                               <div class="modal-body p-4">
                                 <h2 class="fw-bold mb-0">Status</h2>
-                    
-                                <div class="form-check form-switch mt-2">
-                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                                  <label class="form-check-label" for="flexSwitchCheckDefault">Não Finalizado</label>
-                                </div>
+
+                                <form class="mt-3" action="finais/php/status.php" method="post" name="formulario" onsubmit = "return(status());">
+                                  <span>
+                                    <?php
+                                    if (!isset($_SESSION)) session_start();
+
+                                    if($_SESSION['UsuarioNome'] == null){
+                              
+                                        header("Location: ../../index.html");
+                                        exit();
+                                    }
+                          
+                                    include("../php/conexao/connection.php");
+
+                                    $escola = $_SESSION['UsuarioNome'];
+                                    $segmento = 2; //mudar segmento
+
+                                    $query = "SELECT * FROM finalizado WHERE segmento like '$segmento' AND escola like '$escola';";
+                                    
+                                    $result = $conn->query($query);
+                                    $linhas = mysqli_num_rows($result);
+
+                                    if($linhas > 0){
+                                    while ($row = $result->fetch_assoc()){
+                                      $status = $row["status"];
+                                      echo '<p style="color:green; font-weight:bold; font-size:18px;">Finalizado</p>';
+                                      echo '<script type="text/javascript">
+                                      show();
+                                      </script>';
+                                      }
+                                      }else{
+                                        echo '<p style="color:red; font-weight:bold; font-size:18px;">Não finalizado</p>';
+                                      }
+
+                                      
+
+                                    ?>
+                                  </span>
+                                  <button class="btn btn-warning text-white" onclick="" style="font-weight:bold;" type="submit" role="" id="flexSwitchCheckDefault" name="validaStatus" value="Finalizar">Finalizar</button>
+                                </form>
+
                               </div>
                             </div>
                           </div>  
                         </div>
                 </div>             
+            </div> <!--STATUS-->
+            <!-- botão voltar
+            <div class="d-flex flex-row-reverse w-50 m-auto text-left mt-5">
+              <a class="btn btn-danger" href="menu.html" role="button">Voltar</a>
             </div>
+            -->
     </div>
     
 </body>

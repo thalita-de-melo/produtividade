@@ -51,7 +51,7 @@
     </div> <!--header-->
 <div class="container mt-5">
         <div class="alert alert-success" id="sucesso" style="display: none;">Turma Adicionada</div>
-        <div class="alert alert-danger" id="fail" style="display: none;">A turma que você está tentando adicionar já existe. Por favor verifique a numeração da turma e tnete novamente.</div>
+        <div class="alert alert-danger" id="fail" style="display: none;">A turma que você está tentando adicionar já existe. Por favor verifique a numeração da turma e tente novamente.</div>
     
         <div class="col-12">
         <a class="btn btn-info text-white" href="../verturmas.php" role="button">Ver turmas</a>

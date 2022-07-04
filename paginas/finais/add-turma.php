@@ -1,13 +1,30 @@
 <?php
 
-          if (!isset($_SESSION)) session_start();
+    include("../../php/conexao/connection.php");
 
-          if($_SESSION['UsuarioNome'] == null){
+    if (!isset($_SESSION)) session_start();
+
+    if($_SESSION['UsuarioNome'] == null){
     /* Manda a pessoa de volta caso não esteja logada*/
 
-            header("Location: ../index.html");
-            exit();
-        }
+        header("Location: ../index.html");
+        exit();
+    }
+
+    $escola = $_SESSION['UsuarioNome'];
+    $segmento = 2;
+
+    $check_query = "SELECT * FROM finalizado WHERE segmento like '$segmento' AND escola like '$escola';";
+    $check = $conn->query($check_query);
+    $check_rows = mysqli_num_rows($check);
+
+    //echo $check_rows;
+
+    if($check_rows > 0){
+        header("Location: ../menu.html");
+    }else{
+
+    }
 
 ?>
 <!DOCTYPE html>
@@ -29,7 +46,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
-<body>
+<body class="bg-primary bg-opacity-10">
 <div class="main">
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
@@ -42,25 +59,28 @@
                   <div class="collapse navbar-collapse" id="navbarsExample07">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="menu.html">Inicio</a>
+                        <a class="nav-link" href="../menu.html">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" href="../anos_iniciais.php">Anos Iniciais</a>
+                        <a class="nav-link" href="../anos_iniciais.php">Anos Iniciais</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="anos_finais.php">Anos Finais</a> <!--disabled-->
+                        <a class="nav-link active" href="../anos_finais.php">Anos Finais</a> <!--disabled-->
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="medio.php">Ensino Médio</a>
+                        <a class="nav-link" href="../medio.php">Ensino Médio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="eja.php">EJA</a>
+                        <a class="nav-link" href="../eja.php">EJA</a>
                       </li>
                     </ul>
+                    <div class="text-end">
+                      <a class="btn btn-danger" href="../anos_finais.php" role="button">Voltar</a>
+                    </div>
                   </div>
                 </div>
               </nav>
-    </div> <!--header-->
+        </div> <!--header-->
     <div class="container d-flex flex-column ">
         <h1 class="mt-2">Adicione as Infomações da Turma</h1>
         <?php echo "<h3>Escola: {$_SESSION['UsuarioNome']} </h3>"  ; ?> <!--return(validate());-->
@@ -206,14 +226,13 @@
 
     function validate() {
       
-      if( document.formulario.mat.value == "" ) {
+        if( document.formulario.mat.value == "" ) {
          alert( "Adicione o número de alunos Matriculados!" );
          document.formulario.mat.focus() ;
          return false;
       }
-      alert("Turma Adicionada com Sucesso!");
-      window.open("add-turma.php");
-      //header("Location: add-turma.php");
+      //alert("Turma Adicionada com Sucesso!");
+      //window.open("add-turma.php");
       return (true);
     }
 

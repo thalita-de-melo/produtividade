@@ -27,43 +27,46 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
-<body>
+<body class="bg-success bg-opacity-10">
     <div class="main">
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
-                <div class="container">
-                  <a class="navbar-brand" href="menu.html">Produtividade</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-            
-                  <div class="collapse navbar-collapse" id="navbarsExample07">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="menu.html">Inicio</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="anos_iniciais.php">Anos Iniciais</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="anos_finais.php">Anos Finais</a> <!--disabled-->
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="medio.php">Ensino Médio</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="eja.php">EJA</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-        </div> <!--header-->
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
+          <div class="container">
+            <a class="navbar-brand" href="menu.html">Produtividade</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarsExample07">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="../menu.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="../anos_iniciais.php">Anos Iniciais</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../anos_finais.php">Anos Finais</a> <!--disabled-->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../medio.php">Ensino Médio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../eja.php">EJA</a>
+                </li>
+              </ul>
+              <div class="text-end">
+                <a class="btn btn-danger" href="../menu.html" role="button">Voltar</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </div> <!--header-->
 
         <div class="container">
             <form action="php/crud.php" method="post" class="row g-3 mt-3" style="align-items: center;" >
                 <div class="row-sm-6">
-                    <label class="form-label" for="autoSizingInput">Ano</label>
+                    <label class="form-label" style="font-weight: bold;" for="autoSizingInput">Ano</label>
                     <select class="form-select" name="ano" id="autoSizingSelect">
                         <option selected value="">Todos os anos</option>
                         <option value="2o">2º Ano</option>

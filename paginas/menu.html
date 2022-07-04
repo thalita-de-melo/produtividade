@@ -17,7 +17,7 @@
 
 
 </head>
-<body>
+<body class="bg-light">
     <div class="main">
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
@@ -33,24 +33,27 @@
                         <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Anos Iniciais</a>
+                        <a class="nav-link" href="anos_iniciais.php">Anos Iniciais</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Anos Finais</a> <!--disabled-->
+                        <a class="nav-link" href="anos_finais.php">Anos Finais</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Ensino Médio</a>
+                        <a class="nav-link" href="ensino_medio.php">Ensino Médio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">EJA</a>
+                        <a class="nav-link" href="eja.php">EJA</a>
                       </li>
                     </ul>
+                    <div class="text-end">
+                      <a class="btn btn-danger" href="../index.html" role="button">Sair</a>
+                    </div>
                   </div>
                 </div>
               </nav>
         </div> <!--header-->
         <div class="container" id="principal">
-            <div class="row"> <!--anos iniciais e finais-->
+            <div class="row mt-5"> <!--anos iniciais e finais-->
                 <div class="row mt-5" tabindex="-1" role="dialog" id="modalTour">
                       <div class="col">
                         <div class="modal-dialog modal-sm" role="document">
@@ -58,7 +61,7 @@
                               <div class="modal-body p-5">
                                 <h2 class="fw-bold mb-0">Anos Iniciais</h2>
                     
-                                <a class="btn btn-lg btn-primary mt-5 w-100" href="anos_iniciais.php" role="button">Clique Aqui</a>
+                                <a class="btn btn-lg btn-success opacity-75 bg-opacity-50 mt-5 w-100" href="anos_iniciais.php" role="button">Clique Aqui</a>
                               </div>
                             </div>
                           </div>  
@@ -69,14 +72,14 @@
                               <div class="modal-body p-5">
                                 <h2 class="fw-bold mb-0">Anos Finais</h2>
                         
-                                <a class="btn btn-lg btn-primary mt-5 w-100" href="anos_finais.php" role="button">Clique Aqui</a>
+                                <a class="btn btn-lg btn-primary opacity-75 mt-5 w-100" href="anos_finais.php" role="button">Clique Aqui</a>
                               </div>
                             </div>
                           </div> 
                       </div> 
                 </div>           
             </div>
-            <div class="row"> <!--Ensino medio e eja-->
+            <div class="row mt-5"> <!--Ensino medio e eja-->
                 <div class="row mt-5" tabindex="-1" role="dialog" id="modalTour">
                       <div class="col">
                         <div class="modal-dialog modal-sm" role="document">
@@ -84,7 +87,7 @@
                               <div class="modal-body p-5">
                                 <h2 class="fw-bold mb-0">Ensino Médio</h2>
                         
-                                <button type="button" class="btn btn-lg btn-primary mt-5 w-100" data-bs-dismiss="modal">Clique Aqui</button>
+                                <a class="btn btn-lg btn-info bg-opacity-50 text-white mt-5 w-100" href="ensino_medio.php" role="button">Clique Aqui</a>
                               </div>
                             </div>
                           </div>  
@@ -95,7 +98,7 @@
                               <div class="modal-body p-5">
                                 <h2 class="fw-bold mb-0">EJA</h2>
                         
-                                <button type="button" class="btn btn-lg btn-primary mt-5 w-100" data-bs-dismiss="modal">Clique Aqui</button>
+                                <a class="btn btn-lg btn-danger opacity-75 mt-5 w-100" href="eja.php" role="button">Clique Aqui</a>
                               </div>
                             </div>
                           </div> 
