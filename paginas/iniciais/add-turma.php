@@ -71,7 +71,7 @@
         <div class="col-sm-3 col-flex">
         <label class="form-label" for="autoSizingInput">Turma</label>
         <select class="form-select" name="id" id="autoSizingSelect">
-            <option selected>* Escolha</option>
+            <option selected>* Escolha a Turma</option>
             <option value="EF 201">EF 201</option>
             <option value="EF 202">EF 202</option>
             <option value="EF 203">EF 203</option>
@@ -103,12 +103,44 @@
             <option value="EF 313">EF 313</option>
             <option value="EF 314">EF 314</option>
             <option value="EF 315">EF 315</option>
+            <!-- 4º ano -->
+            <option value="EF 401">EF 401</option>
+            <option value="EF 402">EF 402</option>
+            <option value="EF 403">EF 403</option>
+            <option value="EF 404">EF 404</option>
+            <option value="EF 405">EF 405</option>
+            <option value="EF 406">EF 406</option>
+            <option value="EF 407">EF 407</option>
+            <option value="EF 408">EF 408</option>
+            <option value="EF 409">EF 409</option>
+            <option value="EF 410">EF 410</option>
+            <option value="EF 411">EF 411</option>
+            <option value="EF 412">EF 412</option>
+            <option value="EF 413">EF 413</option>
+            <option value="EF 414">EF 414</option>
+            <option value="EF 415">EF 415</option>
+            <!-- 5º ano -->
+            <option value="EF 501">EF 501</option>
+            <option value="EF 502">EF 502</option>
+            <option value="EF 503">EF 503</option>
+            <option value="EF 504">EF 504</option>
+            <option value="EF 505">EF 505</option>
+            <option value="EF 506">EF 506</option>
+            <option value="EF 507">EF 507</option>
+            <option value="EF 508">EF 508</option>
+            <option value="EF 509">EF 509</option>
+            <option value="EF 510">EF 510</option>
+            <option value="EF 511">EF 511</option>
+            <option value="EF 512">EF 512</option>
+            <option value="EF 513">EF 513</option>
+            <option value="EF 514">EF 514</option>
+            <option value="EF 515">EF 515</option>
             </select>
         </div>
         <div class="col-sm-3">
         <label class="form-label" for="autoSizingInput">*   Ano</label>
         <select class="form-select" name="ano" id="autoSizingSelect">
-            <option selected>Ano</option>
+            <option selected>* Escolha o Ano</option>
             <option value="2o">2º Ano</option>
             <option value="3o">3º Ano</option>
             <option value="4o">4º Ano</option>
@@ -170,7 +202,47 @@
       
       if( document.formulario.mat.value == "" ) {
          alert( "Adicione o número de alunos Matriculados!" );
-         document.formulario.mat.focus() ;
+         document.formulario.mat.focus();
+         return false;
+      }
+      if( document.formulario.av_relatorio.value == "" ) {
+         alert( "Campo obrigatório!" );
+         document.formulario.av_relatorio.focus();
+         return false;
+      }
+      if( document.formulario.av_notas.value == "" ) {
+         alert( "Campo obrigatório!" );
+         document.formulario.av_notas.focus();
+         return false;
+      }
+      if( document.formulario.azul_todas.value == "" ) {
+         alert( "Campo obrigatório!" );
+         document.formulario.azul_todas.focus();
+         return false;
+      }
+      if( document.formulario.azul_pt.value == "" ) {
+         alert( "Campo obrigatório!" );
+         document.formulario.azul_pt.focus();
+         return false;
+      }
+      if( document.formulario.azul_mat.value == "" ) {
+         alert( "Campo obrigatório!" );
+         document.formulario.azul_mat.focus();
+         return false;
+      }
+      if( document.formulario.azul_cien.value == "" ) {
+         alert( "Campo obrigatório!" );
+         document.formulario.azul_cien.focus();
+         return false;
+      }
+      if( document.formulario.azul_geo.value == "" ) {
+         alert( "Campo obrigatório!" );
+         document.formulario.azul_geo.focus();
+         return false;
+      }
+      if( document.formulario.azul_hist.value == "" ) {
+         alert( "Campo obrigatório!" );
+         document.formulario.azul_hist.focus();
          return false;
       }
       //alert("Turma Adicionada com Sucesso!");

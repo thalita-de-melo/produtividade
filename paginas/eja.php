@@ -10,7 +10,6 @@
         }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,8 +29,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
-<body class="bg-success bg-opacity-10">
-
+<body class="bg-danger bg-opacity-10">
 <script>
       function status(){
         let getStatus = confirm("Uma vez finalizado você não poderá editar os dados. \nVocê tem certeza que deseja finalizar esse módulo?");
@@ -53,8 +51,6 @@
         element.style.display = 'none';
       }
 </script>
-    
-
 <div class="main">
           <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
@@ -67,13 +63,13 @@
                   <div class="collapse navbar-collapse" id="navbarsExample07">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="menu.html">Inicio</a>
+                        <a class="nav-link" href="menu.html">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" href="anos_iniciais.php">Anos Iniciais</a>
+                        <a class="nav-link" href="anos_iniciais.php">Anos Iniciais</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="anos_finais.php">Anos Finais</a> <!--disabled-->
+                        <a class="nav-link active" href="anos_finais.php">Anos Finais</a> <!--disabled-->
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="ensino_medio.php">Ensino Médio</a>
@@ -90,16 +86,16 @@
               </nav>
         </div> <!--header-->
         <div class="container" id="principal">
-        <h1 class='text-center mt-5 opacity-75 text-decoration-underline' style='color: #000000; font-weight:bold; '>Anos Iniciais</h1>
+          <h1 class='text-center mt-5 opacity-75 text-decoration-underline' style='color: #000000; font-weight:bold; '>EJA</h1>
             <div class="row"> <!--anos iniciais e finais-->
-                <div class="row mt-5" tabindex="-1" style="display=block" role="dialog" id="bloqueia">
+                <div class="row mt-5" tabindex="-1" role="dialog" id="bloqueia">
                       <div class="col mt-3">
                         <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content rounded-4 shadow bg-light ">
+                            <div class="modal-content rounded-4 shadow bg-light">
                               <div class="modal-body p-4">
                                 <h2 class="fw-bold mb-0">Adicionar Turma</h2>
                     
-                                <a class="btn btn-lg btn-primary mt-5 w-100" href="iniciais/add-turma.php" role="button">Clique Aqui</a>
+                                <a class="btn btn-lg btn-primary mt-5 w-100" href="eja/add-turma.php" role="button">Clique Aqui</a>
                               </div>
                             </div>
                           </div>  
@@ -110,20 +106,22 @@
                               <div class="modal-body p-4">
                                 <h2 class="fw-bold mb-0">Ver Turmas</h2>
                         
-                                <a class="btn btn-lg btn-primary mt-5 w-100" href="iniciais/verturmas.php" role="button">Clique Aqui</a>
+                                <a class="btn btn-lg btn-primary mt-5 w-100" href="eja/verturmas.php" role="button">Clique Aqui</a>
                               </div>
                             </div>
                           </div> 
                       </div> 
-                </div>   
-                <div class="row mt-5 text-center" tabindex="-1" role="dialog" id="modalTour">
+                </div>              
+            </div>
+
+            <div class="row mt-5 text-center" tabindex="-1" role="dialog" id="modalTour">
                       <div class="col mt-3">
                         <div class="modal-dialog modal-sm" role="document">
                             <div class="modal-content rounded-4 shadow bg-light">
                               <div class="modal-body p-4">
                                 <h2 class="fw-bold mb-0">Status</h2>
 
-                                <form class="mt-3" action="iniciais/php/status.php" method="post" name="formulario" onsubmit = "return(status());">
+                                <form class="mt-3" action="eja/php/status.php" method="post" name="formulario" onsubmit = "return(status());">
                                   <span>
                                     <?php
                                     if (!isset($_SESSION)) session_start();
@@ -137,7 +135,7 @@
                                     include("../php/conexao/connection.php");
 
                                     $escola = $_SESSION['UsuarioNome'];
-                                    $segmento = 1;
+                                    $segmento = 2; //mudar segmento
 
                                     $query = "SELECT * FROM finalizado WHERE segmento like '$segmento' AND escola like '$escola';";
                                     
@@ -169,8 +167,12 @@
                         </div>
                 </div>             
             </div> <!--STATUS-->
+            <!-- botão voltar
+            <div class="d-flex flex-row-reverse w-50 m-auto text-left mt-5">
+              <a class="btn btn-danger" href="menu.html" role="button">Voltar</a>
+            </div>
+            -->
     </div>
-
     
 </body>
 </html>

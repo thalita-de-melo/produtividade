@@ -14,7 +14,7 @@
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
                 <div class="container">
-                  <a class="navbar-brand" href="menu.html">Produtividade</a>
+                  <a class="navbar-brand" href="../../menu.html">Produtividade</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -25,13 +25,13 @@
                         <a class="nav-link" aria-current="page" href="menu.html">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" href="../../anos_iniciais.php">Anos Iniciais</a>
+                        <a class="nav-link " href="../../anos_iniciais.php">Anos Iniciais</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="../../anos_finais.php">Anos Finais</a> <!--disabled-->
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="../../ensino_medio.php">Ensino Médio</a>
+                        <a class="nav-link active" href="../../ensino_medio.php">Ensino Médio</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="../../eja.php">EJA</a>
@@ -92,28 +92,39 @@ if(isset($_POST['inserir'])) {
     $azul_todas = $_POST['azul_todas'];
     $professor_pt = $_POST['professor_pt'];
     $azul_pt = $_POST['azul_pt'];
+    $professor_lit = $_POST['professor_lit'];
+    $azul_lit = $_POST['azul_lit'];
     $professor_mat = $_POST['professor_mat'];
     $azul_mat = $_POST['azul_mat'];
-    $professor_cien = $_POST['professor_cien'];
-    $azul_cien = $_POST['azul_cien'];
+    $professor_bio = $_POST['professor_bio'];
+    $azul_bio = $_POST['azul_bio'];
+    $professor_qui = $_POST['professor_qui'];
+    $azul_qui = $_POST['azul_qui'];
+    $professor_qui = $_POST['professor_qui'];
+    $azul_qui = $_POST['azul_qui'];
+    $professor_fis = $_POST['professor_fis'];
+    $azul_fis = $_POST['azul_fis'];
     $professor_geo = $_POST['professor_geo'];
     $azul_geo = $_POST['azul_geo'];
     $professor_hist = $_POST['professor_hist'];
     $azul_hist = $_POST['azul_hist'];
-    $professor_ed_fis = $_POST['professor_ed_fis'];
-    $azul_ed_fis = $_POST['azul_ed_fis'];
-    $professor_arte = $_POST['professor_arte'];
-    $azul_arte = $_POST['azul_arte'];
+    $professor_soc = $_POST['professor_soc'];
+    $azul_soc = $_POST['azul_soc'];
+    $professor_fil = $_POST['professor_fil'];
+    $azul_fil = $_POST['azul_fil'];
     $professor_ingles = $_POST['professor_ingles'];
     $azul_ingles = $_POST['azul_ingles'];
+    $professor_esp = $_POST['professor_esp'];
+    $azul_esp = $_POST['azul_esp'];
+    $professor_ed_fis = $_POST['professor_ed_fis'];
+    $azul_ed_fis = $_POST['azul_ed_fis'];
 
 // Performing SQL query
-$query = "INSERT INTO turmas_finais VALUES (CURRENT_TIMESTAMP,'$escola','$id','$ano','$mat','$av_relatorio',
-'$av_notas','$azul_todas','$professor_pt','$azul_pt', '$professor_mat','$azul_mat','$professor_cien','$azul_cien',
-'$professor_geo','$azul_geo','$professor_hist','$azul_hist','$professor_ed_fis','$azul_ed_fis',
-'$professor_arte','$azul_arte','$professor_ingles','$azul_ingles')"; 
+$query = "INSERT INTO turmas_medio VALUES (CURRENT_TIMESTAMP,'$escola','$id','$ano','$mat','$av_relatorio',
+'$av_notas','$azul_todas','$professor_pt','$azul_pt', '$professor_lit','$azul_lit', '$professor_mat','$azul_mat','$professor_bio','$azul_bio','$professor_qui','$azul_qui','$professor_fis','$azul_fis',
+'$professor_geo','$azul_geo','$professor_hist','$azul_hist', '$professor_soc','$azul_soc', '$professor_fil','$azul_fil', '$professor_ingles','$azul_ingles', '$professor_esp','$azul_esp','$professor_ed_fis','$azul_ed_fis')"; 
 
-$check_query = "SELECT * FROM turmas_finais WHERE id like '$id' AND escola like '$escola';";
+$check_query = "SELECT * FROM turmas_medio WHERE id like '$id' AND escola like '$escola';";
 $check = $conn->query($check_query);
 $check_rows = mysqli_num_rows($check);
 

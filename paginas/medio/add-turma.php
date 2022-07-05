@@ -33,7 +33,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anos Iniciais</title>
+    <title>Produtividade</title>
 
     
     <!--CSS-->
@@ -46,12 +46,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
-<body class="bg-primary bg-opacity-10">
+<body class="bg-info bg-opacity-10 mb-5">
 <div class="main">
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
                 <div class="container">
-                  <a class="navbar-brand" href="menu.html">Produtividade</a>
+                  <a class="navbar-brand" href="../menu.html">Produtividade</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -68,14 +68,14 @@
                         <a class="nav-link active" href="../anos_finais.php">Anos Finais</a> <!--disabled-->
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="../medio.php">Ensino Médio</a>
+                        <a class="nav-link" href="../ensino_medio.php">Ensino Médio</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="../eja.php">EJA</a>
                       </li>
                     </ul>
                     <div class="text-end">
-                      <a class="btn btn-danger" href="../anos_finais.php" role="button">Voltar</a>
+                      <a class="btn btn-danger" href="../ensino_medio.php" role="button">Voltar</a>
                     </div>
                   </div>
                 </div>
@@ -89,79 +89,23 @@
         <label class="form-label" for="autoSizingInput">Turma</label>
         <select class="form-select" name="id" id="autoSizingSelect">
             <option selected>* Escolha a Turma</option>
-            <option value="EF 601">EF 601</option>
-            <option value="EF 602">EF 602</option>
-            <option value="EF 603">EF 603</option>
-            <option value="EF 604">EF 604</option>
-            <option value="EF 605">EF 605</option>
-            <option value="EF 606">EF 606</option>
-            <option value="EF 607">EF 607</option>
-            <option value="EF 608">EF 608</option>
-            <option value="EF 609">EF 609</option>
-            <option value="EF 610">EF 610</option>
-            <option value="EF 611">EF 611</option>
-            <option value="EF 612">EF 612</option>
-            <option value="EF 613">EF 613</option>
-            <option value="EF 614">EF 614</option>
-            <option value="EF 615">EF 615</option>
-            <!-- 7º ano -->
-            <option value="EF 701">EF 701</option>
-            <option value="EF 702">EF 702</option>
-            <option value="EF 703">EF 703</option>
-            <option value="EF 704">EF 704</option>
-            <option value="EF 705">EF 705</option>
-            <option value="EF 706">EF 706</option>
-            <option value="EF 707">EF 707</option>
-            <option value="EF 708">EF 708</option>
-            <option value="EF 709">EF 709</option>
-            <option value="EF 710">EF 710</option>
-            <option value="EF 711">EF 711</option>
-            <option value="EF 712">EF 712</option>
-            <option value="EF 713">EF 713</option>
-            <option value="EF 714">EF 714</option>
-            <option value="EF 715">EF 715</option>
-            <!-- 8º ano -->
-            <option value="EF 801">EF 801</option>
-            <option value="EF 802">EF 802</option>
-            <option value="EF 803">EF 803</option>
-            <option value="EF 804">EF 804</option>
-            <option value="EF 805">EF 805</option>
-            <option value="EF 806">EF 806</option>
-            <option value="EF 807">EF 807</option>
-            <option value="EF 808">EF 808</option>
-            <option value="EF 809">EF 809</option>
-            <option value="EF 810">EF 810</option>
-            <option value="EF 811">EF 811</option>
-            <option value="EF 812">EF 812</option>
-            <option value="EF 813">EF 813</option>
-            <option value="EF 814">EF 814</option>
-            <option value="EF 815">EF 815</option>
-            <!-- 9º ano -->
-            <option value="EF 901">EF 901</option>
-            <option value="EF 902">EF 902</option>
-            <option value="EF 903">EF 903</option>
-            <option value="EF 904">EF 904</option>
-            <option value="EF 905">EF 905</option>
-            <option value="EF 906">EF 906</option>
-            <option value="EF 907">EF 907</option>
-            <option value="EF 908">EF 908</option>
-            <option value="EF 909">EF 909</option>
-            <option value="EF 910">EF 910</option>
-            <option value="EF 911">EF 911</option>
-            <option value="EF 912">EF 912</option>
-            <option value="EF 913">EF 913</option>
-            <option value="EF 914">EF 914</option>
-            <option value="EF 915">EF 915</option>
+            <option value="EF 3001">EF 3001</option>
+            <option value="EF 3002">EF 3002</option>
+            <option value="EF 3003">EF 3003</option>
+            <option value="EF 3004">EF 3004</option>
+            <option value="EF 3005">EF 3005</option>
+            <option value="EF 3006">EF 3006</option>
+            <option value="EF 3007">EF 3007</option>
+            <option value="EF 3008">EF 3008</option>
+            <option value="EF 3009">EF 3009</option>
+            <option value="EF 3010">EF 3010</option>
             </select>
         </div>
         <div class="col-sm-3">
         <label class="form-label" for="autoSizingInput">Ano</label>
         <select class="form-select" name="ano" id="autoSizingSelect">
             <option selected>* Escolha o Ano</option>
-            <option value="6o">6º Ano</option>
-            <option value="7o">7º Ano</option>
-            <option value="8o">8º Ano</option>
-            <option value="9o">9º Ano</option>
+            <option value="3o m">3º Ano</option>
             </select>
         </div>
         <div class="col-sm-3">
@@ -189,6 +133,14 @@
             <input type="number" class="form-control" name="azul_pt" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-3">
+            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Literatura</label>
+            <input type="text" class="form-control" name="professor_lit" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+        </div>
+        <div class="col-sm-3">
+            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Literatura</label>
+            <input type="number" class="form-control" name="azul_lit" placeholder="* Nº total de alunos" id="autoSizingInput" >
+        </div>
+        <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Matemática</label>
             <input type="text" class="form-control" name="professor_mat" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
@@ -197,12 +149,28 @@
             <input type="number" class="form-control" name="azul_mat" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Ciências</label>
-            <input type="text" class="form-control" name="professor_cien" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Biologia</label>
+            <input type="text" class="form-control" name="professor_bio" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Ciências</label>
-            <input type="number" class="form-control" name="azul_cien" placeholder="* Nº total de alunos" id="autoSizingInput" >
+            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Biologia</label>
+            <input type="number" class="form-control" name="azul_bio" placeholder="* Nº total de alunos" id="autoSizingInput" >
+        </div>
+        <div class="col-sm-3">
+            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Quimica</label>
+            <input type="text" class="form-control" name="professor_qui" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+        </div>
+        <div class="col-sm-3">
+            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Quimica</label>
+            <input type="number" class="form-control" name="azul_qui" placeholder="* Nº total de alunos" id="autoSizingInput" >
+        </div>
+        <div class="col-sm-3">
+            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Fisíca</label>
+            <input type="text" class="form-control" name="professor_fis" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+        </div>
+        <div class="col-sm-3">
+            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Fisíca</label>
+            <input type="number" class="form-control" name="azul_fis" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Geografia</label>
@@ -221,20 +189,20 @@
             <input type="number" class="form-control" name="azul_hist" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Educação Física</label>
-            <input type="text" class="form-control" name="professor_ed_fis" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Sociologia</label>
+            <input type="text" class="form-control" name="professor_soc" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Educação Física</label>
-            <input type="number" class="form-control" name="azul_ed_fis" placeholder="* Nº total de alunos" id="autoSizingInput" >
+            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Sociologia</label>
+            <input type="number" class="form-control" name="azul_soc" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Arte</label>
-            <input type="text" class="form-control" name="professor_arte" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Filosofia</label>
+            <input type="text" class="form-control" name="professor_fil" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Arte</label>
-            <input type="number" class="form-control" name="azul_arte" placeholder="* Nº total de alunos" id="autoSizingInput" >
+            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Filosofia</label>
+            <input type="number" class="form-control" name="azul_fil" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Inglês</label>
@@ -244,11 +212,27 @@
             <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Inglês</label>
             <input type="number" class="form-control" name="azul_ingles" placeholder="Nº total de alunos" id="autoSizingInput" >
         </div>
+        <div class="col-sm-3">
+            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Espanhol</label>
+            <input type="text" class="form-control" name="professor_esp" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+        </div>
+        <div class="col-sm-3">
+            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Espanhol</label>
+            <input type="number" class="form-control" name="azul_esp" placeholder="Nº total de alunos" id="autoSizingInput" >
+        </div>
+        <div class="col-sm-3">
+            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Educação Física</label>
+            <input type="text" class="form-control" name="professor_ed_fis" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+        </div>
+        <div class="col-sm-3">
+            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Educação Física</label>
+            <input type="number" class="form-control" name="azul_ed_fis" placeholder="* Nº total de alunos" id="autoSizingInput" >
+        </div>
         <p><strong>Campos com * são obrigatórios</strong></p>
         <p><strong>Não deixe os campos de quantidades em branco. Caso necessário preencha com 0 (zero).</strong></p>
         <div class="col-12">
             <button type ="submit" class="btn btn-success" name="inserir">Salvar</button>
-            <a class="btn btn-danger" href="../anos_finais.php" role="button">Voltar</a>
+            <a class="btn btn-danger" href="../ensino_medio.php" role="button">Voltar</a>
         </div>
     </form>
     
@@ -288,9 +272,9 @@
          document.formulario.azul_mat.focus();
          return false;
       }
-      if( document.formulario.azul_cien.value == "" ) {
+      if( document.formulario.bio.value == "" ) {
          alert( "Campo obrigatório!" );
-         document.formulario.azul_cien.focus();
+         document.formulario.azul_bio.focus();
          return false;
       }
       if( document.formulario.azul_geo.value == "" ) {
