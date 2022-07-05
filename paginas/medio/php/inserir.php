@@ -28,7 +28,7 @@
                         <a class="nav-link " href="../../anos_iniciais.php">Anos Iniciais</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="../../anos_finais.php">Anos Finais</a> <!--disabled-->
+                        <a class="nav-link" href="../../anos_finais.php">Anos Finais</a> 
                       </li>
                       <li class="nav-item">
                         <a class="nav-link active" href="../../ensino_medio.php">Ensino Médio</a>
