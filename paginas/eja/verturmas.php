@@ -8,10 +8,11 @@
             header("Location: ../index.html");
             exit();
         }
+
         include("../../php/conexao/connection.php");
 
         $escola = $_SESSION['UsuarioNome'];
-        $segmento = 2; //mudar segmento
+        $segmento = 4; //mudar segmento
 
         $query = "SELECT * FROM finalizado WHERE segmento like '$segmento' AND escola like '$escola';";
         
@@ -21,6 +22,8 @@
         if($linhas > 0){
           header("Location: ../menu.html");
         }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +32,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anos Iniciais - Turmas</title>
+    <title>Produtividade</title>
 
 
     <!--BOOTSTRAP-->
@@ -39,13 +42,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
-<body class="bg-primary bg-opacity-10">
+<body class="bg-danger bg-opacity-10">
     <div class="main">
         <div>
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
                 <div class="container">
-                  <a class="navbar-brand" href="menu.html">Produtividade</a>
+                  <a class="navbar-brand" href="../menu.html">Produtividade</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -59,17 +62,17 @@
                         <a class="nav-link" href="../anos_iniciais.php">Anos Iniciais</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" href="../anos_finais.php">Anos Finais</a> <!--disabled-->
+                        <a class="nav-link " href="../anos_finais.php">Anos Finais</a> <!--disabled-->
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="../medio.php">Ensino Médio</a>
+                        <a class="nav-link" href="../ensino_medio.php">Ensino Médio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="../eja.php">EJA</a>
+                        <a class="nav-link active" href="../eja.php">EJA</a>
                       </li>
                     </ul>
                     <div class="text-end">
-                      <a class="btn btn-danger" href="../anos_finais.php" role="button">Voltar</a>
+                      <a class="btn btn-danger" href="../eja.php" role="button">Voltar</a>
                     </div>
                   </div>
                 </div>
@@ -79,18 +82,18 @@
         <div class="container">
             <form action="php/crud.php" method="post" class="row g-3 mt-3" style="align-items: center;" >
                 <div class="row-sm-6">
-                    <label class="form-label " style="font-weight: bold;" for="autoSizingInput">Ano</label>
+                    <label class="form-label " style="font-weight: bold;" for="autoSizingInput">Ciclo</label>
                     <select class="form-select" name="ano" id="autoSizingSelect">
-                        <option selected value="">Todos os anos</option>
-                        <option value="6o">6º Ano</option>
-                        <option value="7o">7º Ano</option>
-                        <option value="8o">8º Ano</option>
-                        <option value="9o">9º Ano</option>
+                        <option selected value="">Todos os Ciclos</option>
+                        <option value="1o c">1º Ciclo</option>
+                        <option value="2o c">2º Ciclo</option>
+                        <option value="3o c">3º Ciclo</option>
+                        <option value="4o c">4º Ciclo</option>
                         </select>
                 </div>
                 <div class="col-sm-6">
                     <input type ="submit" class="btn btn-primary" name="ler">
-                    <a class="btn btn-danger mx-3" href="../anos_finais.php" role="button">Voltar</a>
+                    <a class="btn btn-danger mx-3" href="../eja.php" role="button">Voltar</a>
                 </div>
             </form>
 

@@ -21,8 +21,8 @@ $query = "delete from turmas_medio where id like '%$id%' AND escola like '%$esco
 $result = $conn->query($query);
 
 //header("Location:../verturmas.php");
-echo "<script>window.open('../verturmas.php');</script>";
-echo "<script>window.close();</script>";
+echo "<script>window.open('../verturmas.php', '_self');</script>"; //self para abrir na mesma aba sem pop up alert 
+//echo "<script>window.close();</script>";
 
 //header("Location: crud.php");
 

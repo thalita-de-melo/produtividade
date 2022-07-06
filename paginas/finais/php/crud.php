@@ -59,7 +59,7 @@
         </nav>
     </div> <!--header-->
 
-  <div class="row">
+  <div class="row-flex">
     <div class="col-12">
     <h1 class='text-center m-2 opacity-75 text-decoration-underline' style='color: #000000; font-weight:bold; '>Anos Finais - Turmas</h1>
 
@@ -125,7 +125,7 @@
       </thead>";
 
           while ($row = $result->fetch_assoc()){
-              echo "<form action='delete.php?id=".$row['id']."'  method='post'>";
+              echo "<form action='delete.php?id=".$row['id']."' onsubmit='return confirma()' method='post'>";
               $id = $row["id"];
               $_SESSION['id'] = $id;
               //<td><input type ='hidden' style='display: none;' name='id' value='".$row['id']."'></td>
@@ -164,7 +164,16 @@
     </div>
 </div>
 
-
+<script>
+  function confirma(){
+    if(confirm("Tem certeza que deseja apagar essa turma?")){
+      alert("Turma apagada")
+      return true;
+    }else{
+      return false;
+    }
+  }
+</script>
 
 </body>
 </html>

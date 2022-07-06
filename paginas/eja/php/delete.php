@@ -16,7 +16,7 @@ if(isset($_POST['apagar'])) {
     $id = $_SESSION['id'];
 
 // Performing SQL query
-$query = "delete from turmas_finais where id like '%$id%' AND escola like '%$escola%' ORDER BY id ASC"; 
+$query = "delete from turmas_eja where id like '%$id%' AND escola like '%$escola%' ORDER BY id ASC"; 
 
 $result = $conn->query($query);
 

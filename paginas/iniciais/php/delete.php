@@ -20,8 +20,8 @@ $query = "delete from turmas_iniciais where id like '%$id%' AND escola like '%$e
 
 $result = $conn->query($query);
 
-echo "<script>window.open('../verturmas.php');</script>";
-echo "<script>window.close();</script>";
+echo "<script>window.open('../verturmas.php', '_self');</script>";
+//echo "<script>window.close();</script>";
 
 }
 

@@ -47,8 +47,11 @@
 
       function show(){
         var element = document.getElementById('bloqueia');
-        console.log(element);
+        var btn = document.getElementById('btnFinaliza');
+        console.log(btn);
         element.style.display = 'none';
+        btn.style.display = 'none';
+        document.getElementById('txtFinaliza').innerHTML = '<p style="color:green; font-weight:bold; font-size:18px;">Finalizado</p>';
       }
 </script>
 <div class="main">
@@ -122,45 +125,14 @@
                                 <h2 class="fw-bold mb-0">Status</h2>
 
                                 <form class="mt-3" action="finais/php/status.php" method="post" name="formulario" onsubmit = "return(status());">
-                                  <span>
-                                    <?php
-                                    if (!isset($_SESSION)) session_start();
-
-                                    if($_SESSION['UsuarioNome'] == null){
-                              
-                                        header("Location: ../../index.html");
-                                        exit();
-                                    }
-                          
-                                    include("../php/conexao/connection.php");
-
-                                    $escola = $_SESSION['UsuarioNome'];
-                                    $segmento = 2; //mudar segmento
-
-                                    $query = "SELECT * FROM finalizado WHERE segmento like '$segmento' AND escola like '$escola';";
-                                    
-                                    $result = $conn->query($query);
-                                    $linhas = mysqli_num_rows($result);
-
-                                    if($linhas > 0){
-                                    while ($row = $result->fetch_assoc()){
-                                      $status = $row["status"];
-                                      echo '<p style="color:green; font-weight:bold; font-size:18px;">Finalizado</p>';
-                                      echo '<script type="text/javascript">
-                                      show();
-                                      </script>';
-                                      }
-                                      }else{
-                                        echo '<p style="color:red; font-weight:bold; font-size:18px;">Não finalizado</p>';
-                                      }
-
-                                      
-
-                                    ?>
+                                  <span id="txtFinaliza">
+                                    <p style="color:red; font-weight:bold; font-size:18px;">Não finalizado</p>
                                   </span>
-                                  <button class="btn btn-warning text-white" onclick="" style="font-weight:bold;" type="submit" role="" id="flexSwitchCheckDefault" name="validaStatus" value="Finalizar">Finalizar</button>
+                                  <div id="btnFinaliza">
+                                    <button class="btn btn-warning text-white" onclick="" style="font-weight:bold;" type="submit" name="validaStatus" value="Finalizar">Finalizar</button>
+                                  </div>
+                                  
                                 </form>
-
                               </div>
                             </div>
                           </div>  
@@ -173,6 +145,41 @@
             </div>
             -->
     </div>
+
+    <?php
+        if (!isset($_SESSION)) session_start();
+
+        if($_SESSION['UsuarioNome'] == null){
+  
+            header("Location: ../../index.html");
+            exit();
+        }
+
+        include("../php/conexao/connection.php");
+
+        $escola = $_SESSION['UsuarioNome'];
+        $segmento = 2; //mudar segmento
+
+        $query = "SELECT * FROM finalizado WHERE segmento like '$segmento' AND escola like '$escola';";
+        
+        $result = $conn->query($query);
+        $linhas = mysqli_num_rows($result);
+
+        if($linhas > 0){
+        while ($row = $result->fetch_assoc()){
+          $status = $row["status"];
+          echo '';
+          echo '<script type="text/javascript">
+          show();
+          </script>';
+          }
+          }else{
+            echo '';
+          }
+
+          
+
+        ?>
     
 </body>
 </html>

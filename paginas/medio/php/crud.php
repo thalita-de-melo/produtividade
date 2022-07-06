@@ -42,10 +42,10 @@
                   <a class="nav-link" href="../../anos_iniciais.php">Anos Iniciais</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="../../anos_finais.php">Anos Finais</a> <!--disabled-->
+                  <a class="nav-link" href="../../anos_finais.php">Anos Finais</a> <!--disabled-->
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../../ensino_medio.php">Ensino Médio</a>
+                  <a class="nav-link active" href="../../ensino_medio.php">Ensino Médio</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../../eja.php">EJA</a>
@@ -59,7 +59,7 @@
         </nav>
     </div> <!--header-->
 
-  <div class="row">
+  <div class="row-flex">
     <div class="col-12">
     <h1 class='text-center m-2 opacity-75 text-decoration-underline' style='color: #000000; font-weight:bold; '>Turmas</h1>
 
@@ -135,7 +135,7 @@
       </thead>";
 
           while ($row = $result->fetch_assoc()){
-              echo "<form action='delete.php?id=".$row['id']."'  method='post'>";
+              echo "<form action='delete.php?id=".$row['id']."' onsubmit='return confirma()' method='post'>";
               $id = $row["id"];
               $_SESSION['id'] = $id;
               //<td><input type ='hidden' style='display: none;' name='id' value='".$row['id']."'></td>
@@ -175,7 +175,16 @@
     </div>
 </div>
 
-
+<script>
+  function confirma(){
+    if(confirm("Tem certeza que deseja apagar essa turma?")){
+      alert("Turma apagada")
+      return true;
+    }else{
+      return false;
+    }
+  }
+</script>
 
 </body>
 </html>

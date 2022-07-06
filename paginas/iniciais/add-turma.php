@@ -9,6 +9,20 @@
             exit();
         }
 
+        include("../../php/conexao/connection.php");
+
+        $escola = $_SESSION['UsuarioNome'];
+        $segmento = 1; //mudar segmento
+
+        $query = "SELECT * FROM finalizado WHERE segmento like '$segmento' AND escola like '$escola';";
+        
+        $result = $conn->query($query);
+        $linhas = mysqli_num_rows($result);
+
+        if($linhas > 0){
+          header("Location: ../menu.html");
+        }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

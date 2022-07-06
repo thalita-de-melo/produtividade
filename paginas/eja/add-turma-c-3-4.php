@@ -14,7 +14,7 @@
     include("../../php/conexao/connection.php");
 
         $escola = $_SESSION['UsuarioNome'];
-        $segmento = 3; //mudar segmento
+        $segmento = 4; //mudar segmento
 
         $query = "SELECT * FROM finalizado WHERE segmento like '$segmento' AND escola like '$escola';";
         
@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
-<body class="bg-info bg-opacity-10 mb-5">
+<body class="bg-danger bg-opacity-10 mb-5">
 <div class="main">
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
@@ -64,13 +64,13 @@
                         <a class="nav-link" href="../anos_iniciais.php">Anos Iniciais</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" href="../anos_finais.php">Anos Finais</a> <!--disabled-->
+                        <a class="nav-link" href="../anos_finais.php">Anos Finais</a> <!--disabled-->
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="../ensino_medio.php">Ensino Médio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="../eja.php">EJA</a>
+                        <a class="nav-link active" href="../eja.php">EJA</a>
                       </li>
                     </ul>
                     <div class="text-end">
@@ -83,28 +83,31 @@
     <div class="container d-flex flex-column ">
         <h1 class="mt-2">Adicione as Infomações da Turma</h1>
         <?php echo "<h3>Escola: {$_SESSION['UsuarioNome']} </h3>"  ; ?> <!--return(validate());-->
-    <form action="php/inserir.php" method="post" name="formulario" onsubmit = "return(validate());" class="row g-3 mt-3">
+    <form action="php/inserir-3-4.php" method="post" name="formulario" onsubmit = "return(validate());" class="row g-3 mt-3">
         <div class="col-sm-3 col-flex">
         <label class="form-label" for="autoSizingInput">Turma</label>
         <select class="form-select" name="id" id="autoSizingSelect">
             <option selected>* Escolha a Turma</option>
-            <option value="EF 3001">EF 3001</option>
-            <option value="EF 3002">EF 3002</option>
-            <option value="EF 3003">EF 3003</option>
-            <option value="EF 3004">EF 3004</option>
-            <option value="EF 3005">EF 3005</option>
-            <option value="EF 3006">EF 3006</option>
-            <option value="EF 3007">EF 3007</option>
-            <option value="EF 3008">EF 3008</option>
-            <option value="EF 3009">EF 3009</option>
-            <option value="EF 3010">EF 3010</option>
+            <!--CICLO 3-->
+            <option value="EJA 301">EJA 301</option>
+            <option value="EJA 302">EJA 302</option>
+            <option value="EJA 303">EJA 303</option>
+            <option value="EJA 304">EJA 304</option>
+            <option value="EJA 305">EJA 305</option>
+            <!--CICLO 4-->
+            <option value="EJA 401">EJA 401</option>
+            <option value="EJA 402">EJA 402</option>
+            <option value="EJA 403">EJA 403</option>
+            <option value="EJA 404">EJA 404</option>
+            <option value="EJA 405">EJA 405</option>
             </select>
         </div>
         <div class="col-sm-3">
         <label class="form-label" for="autoSizingInput">Ano</label>
         <select class="form-select" name="ano" id="autoSizingSelect">
-            <option selected>* Escolha o Ano</option>
-            <option value="3o m">3º Ano</option>
+            <option selected>* Escolha o Ciclo</option>
+            <option value="3o c">3º Ciclo</option>
+            <option value="4o c">4º Ciclo</option>
             </select>
         </div>
         <div class="col-sm-3">
@@ -132,14 +135,6 @@
             <input type="number" class="form-control" name="azul_pt" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Literatura</label>
-            <input type="text" class="form-control" name="professor_lit" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
-        </div>
-        <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Literatura</label>
-            <input type="number" class="form-control" name="azul_lit" placeholder="* Nº total de alunos" id="autoSizingInput" >
-        </div>
-        <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Matemática</label>
             <input type="text" class="form-control" name="professor_mat" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
@@ -148,28 +143,12 @@
             <input type="number" class="form-control" name="azul_mat" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Biologia</label>
-            <input type="text" class="form-control" name="professor_bio" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Ciências</label>
+            <input type="text" class="form-control" name="professor_cien" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Biologia</label>
-            <input type="number" class="form-control" name="azul_bio" placeholder="* Nº total de alunos" id="autoSizingInput" >
-        </div>
-        <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Quimica</label>
-            <input type="text" class="form-control" name="professor_qui" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
-        </div>
-        <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Quimica</label>
-            <input type="number" class="form-control" name="azul_qui" placeholder="* Nº total de alunos" id="autoSizingInput" >
-        </div>
-        <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Fisíca</label>
-            <input type="text" class="form-control" name="professor_fis" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
-        </div>
-        <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Fisíca</label>
-            <input type="number" class="form-control" name="azul_fis" placeholder="* Nº total de alunos" id="autoSizingInput" >
+            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Ciências</label>
+            <input type="number" class="form-control" name="azul_cien" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Geografia</label>
@@ -188,22 +167,6 @@
             <input type="number" class="form-control" name="azul_hist" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Sociologia</label>
-            <input type="text" class="form-control" name="professor_soc" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
-        </div>
-        <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Sociologia</label>
-            <input type="number" class="form-control" name="azul_soc" placeholder="* Nº total de alunos" id="autoSizingInput" >
-        </div>
-        <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Filosofia</label>
-            <input type="text" class="form-control" name="professor_fil" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
-        </div>
-        <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Filosofia</label>
-            <input type="number" class="form-control" name="azul_fil" placeholder="* Nº total de alunos" id="autoSizingInput" >
-        </div>
-        <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Inglês</label>
             <input type="text" class="form-control" name="professor_ingles" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
@@ -212,12 +175,12 @@
             <input type="number" class="form-control" name="azul_ingles" placeholder="Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Espanhol</label>
-            <input type="text" class="form-control" name="professor_esp" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+            <label class="form-label" for="autoSizingInput">Matrícula do Professor de Arte</label>
+            <input type="text" class="form-control" name="professor_arte" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-3">
-            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Espanhol</label>
-            <input type="number" class="form-control" name="azul_esp" placeholder="Nº total de alunos" id="autoSizingInput" >
+            <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Arte</label>
+            <input type="number" class="form-control" name="azul_arte" placeholder="*Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Educação Física</label>
@@ -231,7 +194,7 @@
         <p><strong>Não deixe os campos de quantidades em branco. Caso necessário preencha com 0 (zero).</strong></p>
         <div class="col-12">
             <button type ="submit" class="btn btn-success" name="inserir">Salvar</button>
-            <a class="btn btn-danger" href="../ensino_medio.php" role="button">Voltar</a>
+            <a class="btn btn-danger" href="ciclos.html" role="button">Voltar</a>
         </div>
     </form>
     
@@ -271,9 +234,9 @@
          document.formulario.azul_mat.focus();
          return false;
       }
-      if( document.formulario.bio.value == "" ) {
+      if( document.formulario.cien.value == "" ) {
          alert( "Campo obrigatório!" );
-         document.formulario.azul_bio.focus();
+         document.formulario.azul_cien.focus();
          return false;
       }
       if( document.formulario.azul_geo.value == "" ) {
@@ -289,6 +252,11 @@
       if( document.formulario.azul_ed_fis.value == "" ) {
          alert( "Campo obrigatório!" );
          document.formulario.azul_ed_fis.focus();
+         return false;
+      }
+      if( document.formulario.azul_arte.value == "" ) {
+         alert( "Campo obrigatório!" );
+         document.formulario.azul_arte.focus();
          return false;
       }
       if( document.formulario.azul_ingles.value == "" ) {

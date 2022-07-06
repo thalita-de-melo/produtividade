@@ -1,9 +1,0 @@
-CREATE TABLE turmas_finais(ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP, escola varchar(30), id VARCHAR(10), ano VARCHAR(10), mat int, av_relatorio int, av_notas int, azul_todas int, professor_pt int, azul_pt int, professor_mat int, azul_mat int, professor_cien int,azul_cien int,professor_geo int, azul_geo int,professor_hist int, azul_hist int,professor_ed_fis int, azul_ed_fis int,professor_arte int, azul_arte int,professor_ingles int, azul_ingles int);
-
-CREATE TABLE turmas_iniciais(ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP, escola varchar(30), id VARCHAR(10), ano VARCHAR(10), mat int, av_relatorio int,professor int, av_notas int, azul_todas int,  azul_pt int, azul_mat int, azul_cien int, azul_geo int, azul_hist int);
-
-CREATE TABLE finalizado(ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP, escola varchar(30), status BOOLEAN, segmento int);
-
-CREATE TABLE escolas(id int, nome varchar(30), email varchar(50), senha int);
-
-CREATE TABLE turmas_medio(ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP, escola varchar(30), id VARCHAR(10), ano VARCHAR(10), mat int, av_relatorio int, av_notas int, azul_todas int, professor_pt int, azul_pt int, professor_lit int,azul_lit int, professor_mat int, azul_mat int, professor_bio int,azul_bio int,professor_qui int,azul_qui int,professor_fis int,azul_fis int,professor_geo int, azul_geo int,professor_hist int, azul_hist int,professor_soc int,azul_soc int,professor_fil int,azul_fil int,professor_ingles int, azul_ingles int,professor_esp int,azul_esp int, professor_ed_fis int,azul_ed_fis int);
