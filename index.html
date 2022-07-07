@@ -1,69 +1,115 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Produtividade</title>
-    <meta name="robots" content="noindex">
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/x-icon" href="images/01-SME.png" />
 
     <!--CSS-->
-    <link rel="stylesheet" href="css/estilo.css"/>
+    <link rel="stylesheet" href="css/background.css" />
 
     <!--BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
 
     <style>
-        .texto{
-            font-size: 18px;
-        }
+      .texto {
+        font-size: 18px;
+      }
     </style>
-
-</head>
-<body class="text-center">
+  </head>
+  <body class="text-center" id="bg-index">
     <main class="mt-5">
-        <div class="" style="margin-top: 5%;"></div>
-        <div class="container w-50 m-auto mx-auto">
-            <form action="php/conexao/validacao.php" class="" method="post">
-                <h1 class="h3 mb-3 fw-normal">Dados de Login</h1>
-                        <i class="bi bi-bar-chart-fill" style="font-size: 50px"></i>
-                        <div class="form-floating">
-                            <input type="text" name="email" id="floatingInput" class="form-control" placeholder="escola@smevr.com.br" maxlength="25" />
-                            <label for="floatingInput">Email</label>
-                        </div>
-                        <div class="form-floating mt-3">
-                            <input type="password" name="senha" class="form-control" id="floatingPassword" placeholder="Senha"/>
-                            <label for="floatingPassword">Senha</label>
-                        </div>
-                        <div class="col align-self-end mt-3">
-                            <input type="submit" value="Entrar" class="w-50 btn btn-lg btn-primary" />
-                        </div>
-                     
+      <div class="" style="margin-top: 5%"></div>
+      <div class="container w-50 m-auto mx-auto">
+        <form action="php/conexao/validacao.php" class="" method="post">
+          <h1 class="h3 mb-3 fw-normal">Dados de Login</h1>
+          <i class="bi bi-bar-chart-fill" style="font-size: 50px"></i>
+          <div class="form-floating">
+            <input
+              type="text"
+              name="email"
+              id="floatingInput"
+              class="form-control"
+              placeholder="escola@smevr.com.br"
+              maxlength="40"
+            />
+            <label for="floatingInput">Email</label>
+          </div>
+          <div class="form-floating mt-3">
+            <input
+              type="password"
+              name="senha"
+              class="form-control"
+              id="floatingPassword"
+              placeholder="Senha"
+            />
+            <label for="floatingPassword">Senha</label>
+          </div>
+          <div class="col align-self-end mt-3">
+            <input
+              type="submit"
+              value="Entrar"
+              class="w-50 btn btn-lg btn-primary"
+            />
+          </div>
 
-                    <div class="mt-5">
-                        <h3>Informações</h3>
-                        <p>Informe o email institucional da escola e a senha para acessar o sistema.</p>
-                        <p>O sistema possuí um módulo para cada segmento.</p>
-                        <p>Caso você não possua a matrícula do professor entre em contato com o DGA para solicitar a mesma.</p>
-                        <p><strong>Atenção:</strong> ao clicar em finalizar o módulo será encerrado, uma fez encerrado o mesmo não poderá ser editado.</p>
-                        <p><strong>Caso sua escola não esteja cadastrada entre em contato com o setor de estatística.</strong></p>
-                    </div>
-
-                    
-            </form>
-            <div class="card-body sticky-lg-bottom">
-                <blockquote class="blockquote mb-0">
-                    <footer class="footer">
-                        <p class="mt-5 mb-3 texto">Setor de Estatística - 2022</p>
-                        <p class="text-muted" style="font-size: 14px;">Desenvolvido por Thalita de Melo</p>
-                        <img src="images/sme_logo.png" style="width: 40%;" class=" center img-fluid">
-                    </footer>
-                </blockquote>
-            </div>
+          <div class="mt-5">
+            <h3>Informações</h3>
+            <p>
+              Informe o email institucional da escola e a senha para acessar o
+              sistema.
+            </p>
+            <p>O sistema possuí um módulo para cada segmento.</p>
+            <p>
+              Caso você não possua a matrícula do professor entre em contato com
+              o DGA para solicitar a mesma.
+            </p>
+            <p>
+              <strong>Atenção:</strong> ao clicar em finalizar o módulo será
+              encerrado, uma fez encerrado o mesmo não poderá ser editado.
+            </p>
+            <p>
+              <strong
+                >Caso sua escola não esteja cadastrada entre em contato com o
+                setor de estatística.</strong
+              >
+            </p>
+          </div>
+        </form>
+        <div class="card-body sticky-lg-bottom">
+          <blockquote class="blockquote mb-0">
+            <footer class="footer">
+              <p class="mt-5 mb-3 texto">Setor de Estatística - 2022</p>
+              <p class="text-muted" style="font-size: 14px">
+                Desenvolvido por Thalita de Melo
+              </p>
+              <img
+                src="images/sme_logo.png"
+                style="width: 40%"
+                class="center img-fluid"
+              />
+            </footer>
+          </blockquote>
         </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>

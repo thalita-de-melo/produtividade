@@ -31,9 +31,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anos Iniciais - Turmas</title>
+    <title>Produtividade</title>
 
-
+    <link rel="stylesheet" href="../../css/background.css" />
+    <link rel="icon" type="image/x-icon" href="../../images/01-SME.png" />
     <!--BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
@@ -41,7 +42,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
-<body class="bg-success bg-opacity-10">
+<body id="bg-iniciais">
     <div class="main">
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
@@ -80,7 +81,7 @@
         <div class="container">
             <form action="php/crud.php" method="post" class="row g-3 mt-3" style="align-items: center;" >
                 <div class="row-sm-6">
-                    <label class="form-label" style="font-weight: bold;" for="autoSizingInput">Ano</label>
+                    <label class="form-label" style="font-weight: bold; font-size: 24px;" for="autoSizingInput">Ano</label>
                     <select class="form-select" name="ano" id="autoSizingSelect">
                         <option selected value="">Todos os anos</option>
                         <option value="2o">2º Ano</option>

@@ -18,9 +18,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtividade</title>
 
-    
+    <link rel="icon" type="image/x-icon" href="../images/01-SME.png" />
     <!--CSS-->
-    <link rel="stylesheet" href="css/estilo.css"/>
+    <link rel="stylesheet" href="../css/background.css" />
 
     <!--BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">  
@@ -28,8 +28,11 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
+    <style>
+      
+      </style>
 </head>
-<body class="bg-danger bg-opacity-10">
+<body id="bg-eja">
 <script>
       function status(){
         let getStatus = confirm("Uma vez finalizado você não poderá editar os dados. \nVocê tem certeza que deseja finalizar esse módulo?");
@@ -89,7 +92,7 @@
               </nav>
         </div> <!--header-->
         <div class="container" id="principal">
-          <h1 class='text-center mt-5 opacity-75 text-decoration-underline' style='color: #000000; font-weight:bold; '>EJA</h1>
+          <h1 class='text-center mt-5 text-decoration-underline' style='color: #000000; font-weight:bold; '>EJA</h1>
             <div class="row"> <!--anos iniciais e finais-->
                 <div class="row mt-5" tabindex="-1" role="dialog" id="bloqueia">
                       <div class="col mt-3">

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtividade</title>
 
+    <link rel="stylesheet" href="../../../css/background.css" />
+
     <style>
       th, td{
         font-size: .7em;
@@ -13,7 +15,7 @@
       }
     </style>
 
-    
+<link rel="icon" type="image/x-icon" href="../../../images/01-SME.png" />
 
     <!--BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">  
@@ -22,7 +24,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
-<body style="margin: 0px;">
+<body id="bg-medio">
 
 <div class="main">
     <div>
@@ -59,7 +61,7 @@
         </nav>
     </div> <!--header-->
 
-  <div class="row-flex">
+  <div class="row-flex bg-light bg-opacity-100 p-1 m-3">
     <div class="col-12">
     <h1 class='text-center m-2 opacity-75 text-decoration-underline' style='color: #000000; font-weight:bold; '>Turmas</h1>
 

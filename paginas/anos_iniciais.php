@@ -17,20 +17,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anos Iniciais</title>
+    <title>Produtividade</title>
 
-    
+    <link rel="icon" type="image/x-icon" href="../images/01-SME.png" />
     <!--CSS-->
-    <link rel="stylesheet" href="css/estilo.css"/>
+    <link rel="stylesheet" href="../css/background.css"/>
 
     <!--BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    
+    <style>
+      
+    </style>
 
 </head>
-<body class="bg-success bg-opacity-10">
+<body id="bg-iniciais">
 
 <script>
       function status(){
@@ -93,7 +97,7 @@
               </nav>
         </div> <!--header-->
         <div class="container" id="principal">
-        <h1 class='text-center mt-5 opacity-75 text-decoration-underline' style='color: #000000; font-weight:bold; '>Anos Iniciais</h1>
+        <h1 class='text-center mt-5 text-decoration-underline' style='color: #000000; font-weight:bold; '>Anos Iniciais</h1>
             <div class="row"> <!--anos iniciais e finais-->
                 <div class="row mt-5" tabindex="-1" style="display=block" role="dialog" id="bloqueia">
                       <div class="col mt-3">

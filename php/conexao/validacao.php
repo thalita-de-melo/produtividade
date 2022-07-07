@@ -17,7 +17,7 @@ include("connection.php");
  
 
 if(isset($_POST['email'])) {
-	$email = $_POST['email']; //passar tudo para minusculo ou maisculo -> acresentar 
+	$email = trim(strtolower($_POST['email'])); //passar tudo para minusculo ou maisculo e remove espaço em branco antes ou depois
   	$senha = $_POST['senha'];
 
     $sql = "select * from escolas where email like '%$email%' AND senha like '$senha'";

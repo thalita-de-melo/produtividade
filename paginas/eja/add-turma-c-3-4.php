@@ -34,9 +34,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtividade</title>
 
-    
+    <link rel="icon" type="image/x-icon" href="../../images/01-SME.png" />
     <!--CSS-->
-    <link rel="stylesheet" href="css/estilo.css"/>
+    <link rel="stylesheet" href="../../css/background.css" />
 
     <!--BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">  
@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
-<body class="bg-danger bg-opacity-10 mb-5">
+<body id="bg-eja">
 <div class="main">
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
@@ -80,7 +80,7 @@
                 </div>
               </nav>
         </div> <!--header-->
-    <div class="container d-flex flex-column ">
+    <div class="container d-flex flex-column bg-light bg-opacity-75 p-4 mt-3">
         <h1 class="mt-2">Adicione as Infomações da Turma</h1>
         <?php echo "<h3>Escola: {$_SESSION['UsuarioNome']} </h3>"  ; ?> <!--return(validate());-->
     <form action="php/inserir-3-4.php" method="post" name="formulario" onsubmit = "return(validate());" class="row g-3 mt-3">
