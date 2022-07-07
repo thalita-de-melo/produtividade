@@ -68,7 +68,7 @@
                         <a class="nav-link active" href="../anos_finais.php">Anos Finais</a> <!--disabled-->
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="../medio.php">Ensino Médio</a>
+                        <a class="nav-link" href="../ensino_medio.php">Ensino Médio</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="../eja.php">EJA</a>
