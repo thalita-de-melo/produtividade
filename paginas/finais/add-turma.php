@@ -182,7 +182,7 @@
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Português</label>
-            <input type="text" class="form-control" name="professor_pt" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+            <input type="number" class="form-control" name="professor_pt" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Português</label>
@@ -190,7 +190,7 @@
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Matemática</label>
-            <input type="text" class="form-control" name="professor_mat" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+            <input type="number" class="form-control" name="professor_mat" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Alunos Nota Azul em Matemática</label>
@@ -198,7 +198,7 @@
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Ciências</label>
-            <input type="text" class="form-control" name="professor_cien" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+            <input type="number" class="form-control" name="professor_cien" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Ciências</label>
@@ -206,7 +206,7 @@
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Geografia</label>
-            <input type="text" class="form-control" name="professor_geo" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+            <input type="number" class="form-control" name="professor_geo" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Geografia</label>
@@ -214,7 +214,7 @@
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de História</label>
-            <input type="text" class="form-control" name="professor_hist" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+            <input type="number" class="form-control" name="professor_hist" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em História</label>
@@ -222,7 +222,7 @@
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Educação Física</label>
-            <input type="text" class="form-control" name="professor_ed_fis" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+            <input type="number" class="form-control" name="professor_ed_fis" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Educação Física</label>
@@ -230,7 +230,7 @@
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Arte</label>
-            <input type="text" class="form-control" name="professor_arte" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+            <input type="number" class="form-control" name="professor_arte" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Arte</label>
@@ -238,7 +238,7 @@
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor de Inglês</label>
-            <input type="text" class="form-control" name="professor_ingles" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
+            <input type="number" class="form-control" name="professor_ingles" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Alunos com Nota Azul em Inglês</label>

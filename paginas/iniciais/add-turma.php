@@ -175,7 +175,7 @@
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor</label>
-            <input type="text" class="form-control" name="professor" id="autoSizingInput" placeholder="* Matrícula">
+            <input type="number" class="form-control" name="professor" id="autoSizingInput" placeholder="* Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-6">
             <label class="form-label" for="autoSizingInput">Total de Alunos com Nota Azul em TODAS as Disciplinas</label>
