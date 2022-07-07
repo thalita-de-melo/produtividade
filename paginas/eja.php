@@ -93,7 +93,7 @@
         </div> <!--header-->
         <div class="container" id="principal">
           <h1 class='text-center mt-5 text-decoration-underline' style='color: #000000; font-weight:bold; '>EJA</h1>
-            <div class="row"> <!--anos iniciais e finais-->
+            
                 <div class="row mt-5" tabindex="-1" role="dialog" id="bloqueia">
                       <div class="col mt-3">
                         <div class="modal-dialog modal-sm" role="document">
@@ -142,7 +142,7 @@
                           </div>  
                         </div>
                 </div>             
-            </div> <!--STATUS-->
+            
             <!-- botão voltar
             <div class="d-flex flex-row-reverse w-50 m-auto text-left mt-5">
               <a class="btn btn-danger" href="menu.html" role="button">Voltar</a>
