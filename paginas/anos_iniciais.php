@@ -98,7 +98,7 @@
         </div> <!--header-->
         <div class="container" id="principal">
         <h1 class='text-center mt-5 text-decoration-underline' style='color: #000000; font-weight:bold; '>Anos Iniciais</h1>
-            <div class="row"> <!--anos iniciais e finais-->
+            
                 <div class="row mt-5" tabindex="-1" style="display=block" role="dialog" id="bloqueia">
                       <div class="col mt-3">
                         <div class="modal-dialog modal-sm" role="document">
@@ -145,7 +145,7 @@
                           </div>  
                         </div>
                 </div>             
-            </div> <!--STATUS-->
+            
     </div>
     <?php
         if (!isset($_SESSION)) session_start();
