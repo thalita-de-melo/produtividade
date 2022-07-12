@@ -183,23 +183,23 @@
         </div>
         <div class="col-sm-4">
             <label class="form-label" for="autoSizingInput">Total de Alunos com Nota Azul em Português</label>
-            <input type="number" class="form-control" name="azul_pt" placeholder="*" id="autoSizingInput" >
+            <input type="number" class="form-control" name="azul_pt" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-4">
             <label class="form-label" for="autoSizingInput">Total de Alunos com Nota Azul em Matemática</label>
-            <input type="number" class="form-control" name="azul_mat" placeholder="*" id="autoSizingInput" >
+            <input type="number" class="form-control" name="azul_mat" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-4">
             <label class="form-label" for="autoSizingInput">Total de Alunos com Nota Azul em Ciências</label>
-            <input type="number" class="form-control" name="azul_cien" placeholder="*" id="autoSizingInput" >
+            <input type="number" class="form-control" name="azul_cien" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-6">
             <label class="form-label" for="autoSizingInput">Total de Alunos com Nota Azul em Geografia</label>
-            <input type="number" class="form-control" name="azul_geo" placeholder="*" id="autoSizingInput" >
+            <input type="number" class="form-control" name="azul_geo" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <div class="col-sm-6">
             <label class="form-label" for="autoSizingInput">Total de Alunos com Nota Azul em História</label>
-            <input type="number" class="form-control" name="azul_hist" placeholder="*" id="autoSizingInput" >
+            <input type="number" class="form-control" name="azul_hist" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
         <p>Campos com * são obrigatórios</p>
         <div class="col-12">
