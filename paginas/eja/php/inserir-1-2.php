@@ -16,8 +16,11 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
+    <link rel="stylesheet" href="../../../css/background.css" />
+
+
 </head>
-<body>
+<body id="bg-eja">
 <div class="main">
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
