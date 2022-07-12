@@ -121,8 +121,8 @@
                 </div>              
             </div>
 
-            <div class="row mt-5 text-center" tabindex="-1" role="dialog" id="modalTour">
-                      <div class="col mt-3">
+            <div class="row mt-5 text-center w-100" tabindex="-1" role="dialog" id="modalTour">
+                      <div class="col mt-3 ">
                         <div class="modal-dialog modal-sm" role="document">
                             <div class="modal-content rounded-4 shadow bg-light">
                               <div class="modal-body p-4">
