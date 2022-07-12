@@ -30,7 +30,7 @@
                   <div class="collapse navbar-collapse" id="navbarsExample07">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="menu.html">Inicio</a>
+                        <a class="nav-link" aria-current="page" href="../../menu.html">Inicio</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="../../anos_iniciais.php">Anos Iniciais</a>
@@ -104,8 +104,8 @@ if(isset($_POST['inserir'])) {
     $azul_socnat = $_POST['azul_socnat'];
 
 // Performing SQL query
-$query = "INSERT INTO turmas_eja VALUES (CURRENT_TIMESTAMP,'$escola','$id','$ano','$mat','$av_relatorio',
-'$av_notas','$azul_todas','$professor','$azul_pt','$azul_mat','$azul_socnat',0,0,
+$query = "INSERT INTO turmas_eja VALUES (CURRENT_TIMESTAMP,'$escola','$id','$ano','$mat','$av_relatorio', '$professor',
+'$av_notas','$azul_todas','$azul_pt','$azul_mat','$azul_socnat',0,0,
 0,0,0,0,0,0,0,0,0,0,0,0)"; 
 
 $check_query = "SELECT * FROM turmas_eja WHERE id like '$id' AND escola like '$escola';";

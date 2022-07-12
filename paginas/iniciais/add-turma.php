@@ -175,7 +175,7 @@
         </div>
         <div class="col-sm-3">
             <label class="form-label" for="autoSizingInput">Matrícula do Professor</label>
-            <input type="number" class="form-control" name="professor" id="autoSizingInput" placeholder="* Matrícula (APENAS NÚMEROS)">
+            <input type="number" class="form-control" name="professor" id="autoSizingInput" placeholder="Matrícula (APENAS NÚMEROS)">
         </div>
         <div class="col-sm-6">
             <label class="form-label" for="autoSizingInput">Total de Alunos com Nota Azul em TODAS as Disciplinas</label>
@@ -201,7 +201,8 @@
             <label class="form-label" for="autoSizingInput">Total de Alunos com Nota Azul em História</label>
             <input type="number" class="form-control" name="azul_hist" placeholder="* Nº total de alunos" id="autoSizingInput" >
         </div>
-        <p>Campos com * são obrigatórios</p>
+        <p><strong>Campos com * são obrigatórios</strong></p>
+        <p><strong>Não deixe os campos de quantidades em branco. Caso necessário preencha com 0 (zero).</strong></p>
         <div class="col-12">
             <button type ="submit" class="btn btn-success" name="inserir">Salvar</button>
             <a class="btn btn-danger" href="../anos_iniciais.php" role="button">Voltar</a>

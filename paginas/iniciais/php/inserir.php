@@ -31,19 +31,19 @@
                   <div class="collapse navbar-collapse" id="navbarsExample07">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="menu.html">Inicio</a>
+                        <a class="nav-link" aria-current="page" href="../../menu.html">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" href="../anos_iniciais.php">Anos Iniciais</a>
+                        <a class="nav-link active" href="../../anos_iniciais.php">Anos Iniciais</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="anos_finais.php">Anos Finais</a> <!--disabled-->
+                        <a class="nav-link" href="../../anos_finais.php">Anos Finais</a> <!--disabled-->
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="ensino_medio.php">Ensino Médio</a>
+                        <a class="nav-link" href="../../ensino_medio.php">Ensino Médio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="eja.php">EJA</a>
+                        <a class="nav-link" href="../../eja.php">EJA</a>
                       </li>
                     </ul>
                   </div>

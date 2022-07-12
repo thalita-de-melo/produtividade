@@ -95,7 +95,7 @@
 
     if($linhas > 0){
 
-      echo "<div class='table-responsive-md'>";
+      echo "<div class='table-responsive'>";
       echo "<table class='table table-striped text-center'>"; echo "
       <thead class='thead-light'> 
           <tr bgcolor='#5FAEC2'  >

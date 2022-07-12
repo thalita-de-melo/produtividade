@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtividade</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 <body>
-    
-</body>
-</html>
 
+<div class="container">
 <?php 
 
 include("connection.php");
@@ -25,9 +28,9 @@ if(isset($_POST['email'])) {
 
     if ($result->num_rows != 1) {
     // output data of each row
-        echo "<p>Login inválido!</p>";
-            echo "<div class='container'>";
-            echo "<button onclick=history.go(-1) class='center'>Voltar</button>";
+            echo "<div class='container text-center mt-5'>";
+            echo "<h1>Login inválido!</h1>";
+            echo "<button class='btn btn-danger mt-5' onclick=history.go(-1) class='center'>Voltar</button>";
             echo "</div>"; exit;
     } else {
       // Salva os dados encontados na variável $resultado
@@ -81,7 +84,9 @@ class Login{
 
         //se não estiver logado encerra o script
         if(!$this->estaLogado()){
-            echo 'Não autorizado';
+            echo '<div class="text-center">';
+            echo '<h1>Não autorizado</h1>';
+            echo '<a class="btn btn-danger mx-3" href="../../index.html" role="button">Voltar</a> </div>';
             exit;
         }
 
@@ -95,3 +100,8 @@ class Login{
   	
 
 ?>
+    
+</div>
+</body>
+</html>
+
