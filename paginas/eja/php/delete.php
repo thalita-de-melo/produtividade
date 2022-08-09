@@ -13,10 +13,10 @@ include("../../../php/conexao/connection.php");
 
 if(isset($_POST['apagar'])) {
     $escola = $_SESSION['UsuarioNome'];
-    $id = $_SESSION['id'];
+    $id = $_GET['id'];
 
 // Performing SQL query
-$query = "delete from turmas_eja where id like '%$id%' AND escola like '%$escola%' ORDER BY id ASC"; 
+$query = "delete from turmas_eja where id like '$id' AND escola like '$escola'"; 
 
 $result = $conn->query($query);
 

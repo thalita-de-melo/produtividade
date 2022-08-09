@@ -132,8 +132,8 @@
 
           while ($row = $result->fetch_assoc()){
               echo "<form action='delete.php?id=".$row['id']."' onsubmit='return confirma()' method='post'>";
-              $id = $row["id"];
-              $_SESSION['id'] = $id;
+              //$id = $row["id"];
+              //$_SESSION['id'] = $id;
               //<td><input type ='hidden' style='display: none;' name='id' value='".$row['id']."'></td>
               echo "<tr>  <td><button type ='submit' class='btn btn-danger mt-2' onClick='' name='apagar'><i class='bi bi-trash' syle='font-size: 20px;'></i></button></td> <td>".$row["escola"]." </td> <td>".$row["id"]." </td> <td>".$row["ano"]." </td> <td> ".$row["mat"]." </td> <td> ".$row["av_relatorio"]." </td> <td>".$row["av_notas"]." </td> <td>".$row["azul_todas"]."</td> <td> ".$row["professor"]."</td>  <td>".$row["azul_pt"]."</td> <td>".$row["azul_mat"]."</td> <td>".$row["azul_socnat"]."</td> 
               <td>".$row["azul_ingles"]."</td> <td>".$row["azul_hist"]."</td> <td>".$row["azul_geo"]."</td> 
