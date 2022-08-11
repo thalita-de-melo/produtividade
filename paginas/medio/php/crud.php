@@ -143,7 +143,7 @@
               //<td><input type ='hidden' style='display: none;' name='id' value='".$row['id']."'></td>
               echo "<tr class='' style=''>  <td><button type ='submit' class='btn btn-danger mt-2' onClick='' name='apagar'><i class='bi bi-trash' syle='font-size: 20px;'></i></button></td> <td>".$row["escola"]." </td> <td>".$row["id"]." </td> <td>".$row["ano"]." </td> <td> ".$row["mat"]." </td> <td> ".$row["av_relatorio"]." </td> <td>".$row["av_notas"]." </td> <td>".$row["azul_todas"]."</td> <td> ".$row["professor_pt"]."</td>  <td>".$row["azul_pt"]."</td> <td> ".$row["professor_lit"]."</td>  <td>".$row["azul_lit"]."</td> 
               <td> ".$row["professor_mat"]."</td> <td>".$row["azul_mat"]."</td> <td> ".$row["professor_bio"]."</td> <td>".$row["azul_bio"]."</td> <td> ".$row["professor_qui"]."</td>  <td>".$row["azul_qui"]."</td> <td> ".$row["professor_fis"]."</td>  <td>".$row["azul_fis"]."</td> <td> ".$row["professor_geo"]."</td> <td>".$row["azul_geo"]."</td> <td> ".$row["professor_hist"]."</td> <td>".$row["azul_hist"]."</td> <td> ".$row["professor_soc"]."</td>  <td>".$row["azul_soc"]."</td> <td> ".$row["professor_fil"]."</td>  <td>".$row["azul_fil"]."</td> <td> ".$row["professor_ingles"]."</td> <td>".$row["azul_ingles"]."</td> <td> ".$row["professor_esp"]."</td> <td>".$row["azul_esp"]."</td>  <td> ".$row["professor_ed_fis"]."</td> <td>".$row["azul_ed_fis"]."</td>  </tr>";
-              
+              echo "</form>";
             }
       }else{
           echo "<p>Resultado não encontrado</p>";
@@ -152,7 +152,6 @@
               
           }
 
-    echo "</form>";
     echo "</table>";
 
     echo "<p style='text-align: center; font-weight: bold;'>Total de Turmas: $linhas </p>";

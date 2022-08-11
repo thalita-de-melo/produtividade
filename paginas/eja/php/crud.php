@@ -143,7 +143,7 @@
               <td> ".$row["professor_hist"]."</td> <td> ".$row["professor_geo"]."</td> 
               <td> ".$row["professor_cien"]."</td> <td> ".$row["professor_arte"]."</td> 
               <td> ".$row["professor_ed_fis"]."</td> </tr>";
-              
+              echo "</form>";
             }
       }else{
           echo "<p>Resultado não encontrado</p>";
@@ -152,7 +152,6 @@
               
           }
 
-    echo "</form>";
     echo "</table>";
 
     echo "<p style='text-align: center; font-weight: bold;'>Total de Turmas: $linhas </p>";
